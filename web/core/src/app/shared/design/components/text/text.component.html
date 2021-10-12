@@ -1,0 +1,57 @@
+<span [ngSwitch]="type" #ref>
+    <h1 *ngSwitchCase="'largetitle'" class="large-title">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </h1>
+
+<h2 *ngSwitchCase="'title1'" class="title1">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </h2>
+
+    <h2 *ngSwitchCase="'title2'" class="title2">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </h2>
+
+    <h3 *ngSwitchCase="'title3'" class="title3">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </h3>
+
+    <h1 *ngSwitchCase="'headline'" class="headline">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </h1>
+
+    <p *ngSwitchCase="'body'" class="body">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </p>
+
+    <span *ngSwitchCase="'caption1'" class="caption1">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </span>
+
+    <span *ngSwitchCase="'caption2'" class="caption2">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </span>
+
+    <span *ngSwitchCase="'callout'" class="callout">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </span>
+
+    <span *ngSwitchCase="'footnote'" class="footnote">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </span>
+
+    <h2 *ngSwitchCase="'subhead'" class="subhead">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </h2>
+
+    <label *ngSwitchCase="'label'" class="label">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </label>
+
+    <span *ngSwitchDefault class="base">
+         <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
+    </span>
+</span>
+
+<ng-template #contentRef>
+    <ng-content></ng-content>
+</ng-template>

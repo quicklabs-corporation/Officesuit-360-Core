@@ -1,0 +1,346 @@
+/// Custom Theming for NG-ZORRO
+// For more information: https://ng.ant.design/docs/customize-theme/en
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+// Override less variables to here
+// View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
+
+// @primary-color: #1890ff;
+/* You can add global styles to this file, and also import other style files */
+@import './variables';
+
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+[nz-icon] {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.anticon {
+  vertical-align: middle;
+}
+
+// styles
+
+// Typoraphy
+
+.primary-font {
+  // font-family: 'Lobster Two', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+}
+
+.secondary-font {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+}
+
+
+.large-title {
+  .primary-font();
+  font-size: 72px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+
+.title1 {
+  .primary-font();
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+
+.title2 {
+  .primary-font();
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  color: fade(@black, 70);
+}
+
+.title3 {
+  .primary-font();
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.headline {
+  .primary-font();
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+
+.body {
+  .secondary-font();
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+.callout {
+  .secondary-font();
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+
+.subhead {
+  .secondary-font();
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0px;
+}
+
+.footnote {
+  .secondary-font();
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.caption1 {
+  .secondary-font();
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.caption2 {
+  .secondary-font();
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.label {
+  .secondary-font();
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.base-text {
+  .secondary-font();
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+// overrides
+
+.ant-form label {
+  .label();
+}
+
+
+.ant-form-item-explain, .ant-form-item-extra {
+  .caption2();
+}
+
+
+.ant-form-item-label > label {
+  height: auto;
+}
+
+.ant-form label.ant-radio-wrapper {
+  .caption1();
+  text-transform: capitalize;
+
+  > .ant-radio+span {
+    vertical-align: sub;
+  }
+}
+
+
+.ant-select-multiple .ant-select-selection-item {
+  background-color: @component-background;
+}
+
+nz-date-picker {
+  width: 100%;
+}
+
+.ant-modal-body, .ant-drawer-body  {
+  .base-text();
+}
+
+.ant-modal-title, .ant-drawer-title {
+  .subhead();
+  margin-bottom: 0px;
+}
+
+th.ant-table-cell {
+  .label();
+  margin-bottom: 0px;
+  display: table-cell !important;
+  font-weight: 600 !important;
+}
+
+td.ant-table-cell {
+  .caption1();
+  margin-bottom: 0px;
+  a {
+    .label();
+    display:  inline-block;
+    margin-bottom: 0px;
+  }
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+ background-color: @blue-1;
+}
+
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: @component-background;
+}
+
+.ant-pagination-options-quick-jumper input {
+  background-color: @component-background;
+}
+
+.ant-tabs  {
+  width: 100%;
+}
+.ant-tabs-top .ant-tabs-nav {
+ margin-bottom: 0px;
+}
+
+.ant-tabs-content-holder {
+  border: 1px solid #f0f0f0;
+  border-top-width:0px;
+  padding: 20px;
+  border-radius: 2px;
+}
+ 
+.ant-alert-content .ant-alert-message {
+  .base-text();
+  margin-bottom: 0px;
+}
+
+.ant-alert-with-description .ant-alert-message {
+  .subhead();
+  margin-bottom: 0px;
+}
+
+
+.ant-dropdown .ant-dropdown-menu  {
+  background-color: @white;
+  .ant-dropdown-menu-item {
+    background-color: @white;
+  }
+
+  .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover  {
+    background-color: fade(@primary-color, 10);
+  }
+}
+
+
+
+.ant-result-title {
+  .subhead();
+  margin-bottom: 15px;
+}
+
+.ant-result-subtitle {
+  .base-text();
+}
+
+.ant-result-success .ant-result-icon > .anticon {
+  color: @primary-color;
+}
+
+.steps-content {
+  margin-top: 16px;
+  border: 1px dashed #e9e9e9;
+  border-radius: 6px;
+  background-color: #fafafa;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.steps-action {
+  margin-top: 24px;
+  button {
+    margin-right: 8px;
+  }
+}
+
+
+.ant-message-notice {
+ .ant-message-notice-content {
+   background-color: fade(@black, 60);
+   color: @white;
+   .base-text();
+ }
+}
+
+.ant-upload.ant-upload-drag {
+  .ant-upload-btn.ant-upload {
+    padding: 50px;
+    background-color: @white;
+    .ant-upload-text {
+      .subhead();
+      margin-bottom: 8px;
+    }
+    .ant-upload-hint {
+      .base-text();
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-block {
+  width: 100%;
+  display: block;
+}
+
+.text-muted {
+  color: fade(@black, 60);
+}
+
+.text-primary {
+  color: @primary-color;
+}
+
+.text-success {
+  color: @success-color;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
