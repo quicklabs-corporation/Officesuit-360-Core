@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ql-dashboard',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  selectedModule: string = 'overview';
+  constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
+    this.router.navigate([`/dashboard/${this.selectedModule}`]).then(() => {})
   }
 
+  navigateTo(path: string): void {
+    this.router.navigate([`/dashboard/${path}`]).then(() => {})
+  }
 }

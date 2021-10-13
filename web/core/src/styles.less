@@ -10,6 +10,7 @@
 // @primary-color: #1890ff;
 /* You can add global styles to this file, and also import other style files */
 @import './variables';
+@import './typography';
 
 body {
   overflow-x: hidden;
@@ -28,133 +29,78 @@ body {
 }
 
 // styles
+// Helpers
 
-// Typoraphy
+@iterations: 100;
 
-.primary-font {
-  // font-family: 'Lobster Two', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  font-variant: normal;
-  font-style: normal;
+.util-loop (@i) when (@i > -1) {
+  .m-@{i} {
+    margin:~"@{i}px";
+  }
+
+  .mt-@{i} {
+    margin-top:~"@{i}px";
+  }
+
+  .mb-@{i} {
+    margin-bottom:~"@{i}px";
+  }
+
+  .mr-@{i} {
+    margin-right:~"@{i}px";
+  }
+
+  .ml-@{i} {
+    margin-left:~"@{i}px";
+  }
+
+  .p-@{i} {
+    padding:~"@{i}px";
+  }
+
+  .pt-@{i} {
+    padding-top:~"@{i}px";
+  }
+
+  .px-@{i} {
+    padding-right:~"@{i}px";
+    padding-left:~"@{i}px";
+  }
+
+  .py-@{i} {
+    padding-bottom:~"@{i}px";
+    padding-top:~"@{i}px";
+  }
+
+  .pb-@{i} {
+    padding-bottom:~"@{i}px";
+  }
+
+  .pr-@{i} {
+    padding-right:~"@{i}px";
+  }
+
+  .pl-@{i} {
+    padding-left:~"@{i}px";
+  }
+
+  .util-loop(@i - 1);
 }
 
-.secondary-font {
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  font-variant: normal;
-  font-style: normal;
+.util-loop (@iterations);
+
+.text-left {
+  text-align: left;
 }
 
-
-.large-title {
-  .primary-font();
-  font-size: 72px;
-  font-weight: normal;
-  line-height: 1.2;
-  margin-bottom: 24px;
+.text-right {
+  text-align: right;
 }
 
-
-.title1 {
-  .primary-font();
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 1;
-  margin-bottom: 24px;
+.text-center {
+  text-align: center;
 }
 
-
-.title2 {
-  .primary-font();
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 1.5;
-  margin-bottom: 24px;
-  color: fade(@black, 70);
-}
-
-.title3 {
-  .primary-font();
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-
-.headline {
-  .primary-font();
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-
-
-.body {
-  .secondary-font();
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-
-.callout {
-  .secondary-font();
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-
-
-.subhead {
-  .secondary-font();
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 0px;
-}
-
-.footnote {
-  .secondary-font();
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 1.5;
-}
-
-.caption1 {
-  .secondary-font();
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.5;
-}
-
-.caption2 {
-  .secondary-font();
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.label {
-  .secondary-font();
-  font-size: 10px;
-  text-transform: uppercase;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.base-text {
-  .secondary-font();
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.5;
-}
 
 // overrides
 
@@ -163,12 +109,14 @@ body {
 }
 
 
-.ant-form-item-explain, .ant-form-item-extra {
-  .caption2();
+.ant-form-item-explain,
+.ant-form-item-extra {
+  .py-10;
+  .base-text();
 }
 
 
-.ant-form-item-label > label {
+.ant-form-item-label>label {
   height: auto;
 }
 
@@ -176,11 +124,10 @@ body {
   .caption1();
   text-transform: capitalize;
 
-  > .ant-radio+span {
+  >.ant-radio+span {
     vertical-align: sub;
   }
 }
-
 
 .ant-select-multiple .ant-select-selection-item {
   background-color: @component-background;
@@ -190,11 +137,13 @@ nz-date-picker {
   width: 100%;
 }
 
-.ant-modal-body, .ant-drawer-body  {
+.ant-modal-body,
+.ant-drawer-body {
   .base-text();
 }
 
-.ant-modal-title, .ant-drawer-title {
+.ant-modal-title,
+.ant-drawer-title {
   .subhead();
   margin-bottom: 0px;
 }
@@ -209,15 +158,16 @@ th.ant-table-cell {
 td.ant-table-cell {
   .caption1();
   margin-bottom: 0px;
+
   a {
     .label();
-    display:  inline-block;
+    display: inline-block;
     margin-bottom: 0px;
   }
 }
 
-.ant-table-tbody > tr.ant-table-row:hover > td {
- background-color: @blue-1;
+.ant-table-tbody>tr.ant-table-row:hover>td {
+  background-color: @blue-1;
 }
 
 
@@ -229,20 +179,21 @@ td.ant-table-cell {
   background-color: @component-background;
 }
 
-.ant-tabs  {
+.ant-tabs {
   width: 100%;
 }
+
 .ant-tabs-top .ant-tabs-nav {
- margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .ant-tabs-content-holder {
   border: 1px solid #f0f0f0;
-  border-top-width:0px;
+  border-top-width: 0px;
   padding: 20px;
   border-radius: 2px;
 }
- 
+
 .ant-alert-content .ant-alert-message {
   .base-text();
   margin-bottom: 0px;
@@ -253,14 +204,15 @@ td.ant-table-cell {
   margin-bottom: 0px;
 }
 
-
-.ant-dropdown .ant-dropdown-menu  {
+.ant-dropdown .ant-dropdown-menu {
   background-color: @white;
+
   .ant-dropdown-menu-item {
     background-color: @white;
   }
 
-  .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover  {
+  .ant-dropdown-menu-item:hover,
+  .ant-dropdown-menu-submenu-title:hover {
     background-color: fade(@primary-color, 10);
   }
 }
@@ -276,22 +228,25 @@ td.ant-table-cell {
   .base-text();
 }
 
-.ant-result-success .ant-result-icon > .anticon {
-  color: @primary-color;
-}
-
 .steps-content {
   margin-top: 16px;
   border: 1px dashed #e9e9e9;
   border-radius: 6px;
   background-color: #fafafa;
   min-height: 200px;
-  text-align: center;
-  padding-top: 80px;
 }
 
+.ant-steps-item-title {
+  .subhead();
+  margin: 0;
+  line-height: 32px;
+  &::after {
+    top:16px;
+  }
+}
 .steps-action {
   margin-top: 24px;
+
   button {
     margin-right: 8px;
   }
@@ -299,48 +254,33 @@ td.ant-table-cell {
 
 
 .ant-message-notice {
- .ant-message-notice-content {
-   background-color: fade(@black, 60);
-   color: @white;
-   .base-text();
- }
+  .ant-message-notice-content {
+    background-color: fade(@black, 60);
+    color: @white;
+    .base-text();
+  }
 }
 
 .ant-upload.ant-upload-drag {
   .ant-upload-btn.ant-upload {
     padding: 50px;
     background-color: @white;
+
     .ant-upload-text {
       .subhead();
       margin-bottom: 8px;
     }
+
     .ant-upload-hint {
       .base-text();
     }
   }
 }
 
-.text-center {
-  text-align: center;
+.ant-form-item .ant-input-textarea-show-count::after {
+  bottom: -32px;
 }
 
-.w-block {
-  width: 100%;
-  display: block;
-}
-
-.text-muted {
-  color: fade(@black, 60);
-}
-
-.text-primary {
-  color: @primary-color;
-}
-
-.text-success {
-  color: @success-color;
-}
-
-.mr-8 {
-  margin-right: 8px;
+.ant-checkbox-inner {
+  display: inline-block;
 }

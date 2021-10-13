@@ -28,9 +28,9 @@ html {
 @white: #fff;
 @black: #000;
 
-@background-light:fade(@primary-color,  5);
-@input-placeholder-light: fade(@primary-color, 40);
-@input-border-light: fade(@primary-color,  5);
+@background-light: #fff;
+@input-placeholder-light: fade(@black, 40);
+@input-border-light: #efefef;
 
 // Color used by default to control hover and active backgrounds and for
 // alert info backgrounds.
@@ -71,9 +71,9 @@ html {
 @text-selection-bg: @primary-color;
 @font-variant-base: tabular-nums;
 @font-feature-settings-base: 'tnum';
-@font-size-base: 14px;
+@font-size-base: 16px;
 @font-size-lg: @font-size-base + 2px;
-@font-size-sm: 12px;
+@font-size-sm: 14px;
 @heading-1-size: ceil(@font-size-base * 2.71);
 @heading-2-size: ceil(@font-size-base * 2.14);
 @heading-3-size: ceil(@font-size-base * 1.71);
@@ -85,8 +85,8 @@ html {
 @border-radius-sm: @border-radius-base;
 
 // vertical paddings
-@padding-lg: 22px; // containers
-@padding-md: 16px; // small containers and buttons
+@padding-lg: 32px; // containers
+@padding-md: 22px; // small containers and buttons
 @padding-sm: 12px; // Form controls and items
 @padding-xs: 8px; // small items
 @padding-xss: 4px; // more small
@@ -103,9 +103,9 @@ html {
 @margin-xss: 4px; // more small
 
 // height rules
-@height-base: 32px;
-@height-lg: 40px;
-@height-sm: 24px;
+@height-base: 42px;
+@height-lg: 50px;
+@height-sm: 34px;
 
 // The background colors for active and hover states for things like
 // list items or table cells.
@@ -236,7 +236,7 @@ html {
 // Checkbox
 @checkbox-size: 16px;
 @checkbox-color: @primary-color;
-@checkbox-check-color: @input-background;
+@checkbox-check-color: #efefef;
 @checkbox-check-bg: @checkbox-check-color;
 @checkbox-border-width: @border-width-base;
 @checkbox-group-item-margin-right: 8px;
@@ -411,7 +411,7 @@ html {
     ceil(((@input-height-lg - @font-size-lg * @line-height-base) / 2) * 10) / 10
   ) - @border-width-base;
 @input-placeholder-color: @input-placeholder-light;
-@input-color: @primary-color;
+@input-color: @text-color;
 @input-icon-color: @primary-color;
 @input-border-color: @border-color-base;
 @input-bg: @input-background;
