@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [{
   path: 'dashboard',
   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+}, {
+  path: 'flow',
+  loadChildren: () => import('./flow-tool/flow-tool.module').then(m => m.FlowToolModule)
 }];
 
 @NgModule({
