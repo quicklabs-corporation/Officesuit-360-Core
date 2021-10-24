@@ -1,0 +1,31 @@
+@import '../../../variables.less';
+@import '../../../typography.less';
+
+.line {
+  background-color: fade(@black, 10%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  .text {
+    width: 30px;
+    text-align: center;
+    background-color: @white;
+    position: absolute;
+    .footnote();
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+  }
+
+  &.right {
+    width: 100px;
+    height: 1px;
+  }
+
+  &.bottom {
+    height: 100px;
+    width: 1px;
+  }
+}

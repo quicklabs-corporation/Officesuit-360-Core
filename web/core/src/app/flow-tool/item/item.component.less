@@ -1,0 +1,25 @@
+@import '../../../variables.less';
+@import '../../../typography.less';
+
+.flow-item {
+  padding: 10px 5px;
+  border: 1px solid @border-color-base;
+  width: 200px;
+  display: none;
+  background-color: @white;
+  position: absolute;
+  &.visible {
+    display: flex;
+  }
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  
+  p {
+    width: 120px;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+}

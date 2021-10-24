@@ -1,0 +1,7 @@
+<div class="line" [id]="data?.id"
+    [ngStyle]="data?.condition === condition.YES ? data?.styles?.right :  data.styles.bottom"
+    [ngClass]="{'right' : data?.condition === condition.YES, 'bottom': data?.condition === condition.NO}">
+    <div class="text">
+        {{data.condition}}
+    </div>
+</div>

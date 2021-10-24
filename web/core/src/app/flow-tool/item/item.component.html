@@ -1,0 +1,37 @@
+<section class="flow-item" #flowItem [id]="'qlitem' + data?.id" [ngClass]="{'visible' : data?.visible}"
+    [ngStyle]="data?.styles?.card">
+    <p class="mb-0" (click)="viewItem(data?.id)">
+        <span [ngSwitch]="data?.type">
+            <i nz-icon class="event-color" *ngSwitchCase="itemTypes.EVENT" nzType="thunderbolt" nzTheme="fill"></i>
+            <i nz-icon class="condition-color" *ngSwitchCase="itemTypes.CONDITION" nzType="control" nzTheme="fill"></i>
+            <i nz-icon class="action-color" *ngSwitchCase="itemTypes.ACTION" nzType="code-sandbox"
+                nzTheme="outline"></i>
+        </span>
+        &nbsp; {{data?.type}}
+    </p>
+    <div class="text-right">
+        <button nz-button nz-dropdown [nzDropdownMenu]="items" nzSize="small" nzPlacement="bottomLeft" class="mr-5"
+            *ngIf="(data.type !== itemTypes.CONDITION && data?.childs.length < 1) || (data.type === itemTypes.CONDITION && data.childs?.length < 2)">
+            <i nz-icon nzType="plus" nzTheme="outline"></i>
+        </button>
+        <button nz-button nzSize="small" *ngIf="data?.type !== itemTypes.EVENT" (click)="removeItem(data.id)">
+            <i nz-icon nzType="close" nzTheme="outline"></i>
+        </button>
+
+        <nz-dropdown-menu #items="nzDropdownMenu">
+            <ul nz-menu>
+                <li nz-menu-item class="px-15 py-5" (click)="addItem(itemTypes.CONDITION, data.id, 'Condition')">
+                    <i nz-icon class="condition-color" nzType="control" nzTheme="fill"></i>&nbsp;Condition
+                </li>
+                <li nz-menu-item class="px-15 py-5" (click)="addItem(itemTypes.ACTION, data.id, 'Action')">
+                    <i nz-icon class="action-color" nzType="code-sandbox" nzTheme="outline"></i>&nbsp; Action
+                </li>
+            </ul>
+        </nz-dropdown-menu>
+    </div>
+    <ql-arrow [data]="{'condition': condition.YES , styles: data.styles,  id: getId(1)}"
+        *ngIf="(data.type !== itemTypes.CONDITION && data?.childs?.length === 1) || (data.type === itemTypes.CONDITION && data?.childs?.length > 0)">
+    </ql-arrow>
+    <ql-arrow [data]="{'condition': condition.NO, styles: data.styles, id: getId(2)}"
+        *ngIf="data.type === itemTypes.CONDITION && data?.childs?.length === 2"></ql-arrow>
+</section>
