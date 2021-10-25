@@ -4,7 +4,7 @@ import { ConnectComponent } from './connect.component';
 
 const routes: Routes = [{
   path: '',
-  component: ConnectComponent
+  component: ConnectComponent,
 }];
 
 @NgModule({

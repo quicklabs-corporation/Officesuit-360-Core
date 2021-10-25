@@ -1,0 +1,19 @@
+<div class="member cursor">
+    <span>
+        <nz-badge nzDot>
+            <nz-avatar *ngIf="!data.team; else teamAvatar" nzSize="small" nzText="{{letter}}" [style]="randomColor"
+                [nzShape]="'square'">
+            </nz-avatar>
+        </nz-badge>
+        <span class="ml-5 caption1">{{data?.name}}</span>
+    </span>
+    <span>
+        <i nz-icon nzType="message" class="text-muted mr-8" nzTheme="outline"></i>
+        <i nz-icon nzType="mail" class="text-muted" nzTheme="outline"></i>
+    </span>
+</div>
+
+<ng-template #teamAvatar>
+    <nz-avatar nzSize="small" nzIcon="team" [nzShape]="'square'" [style]="randomColor">
+    </nz-avatar>
+</ng-template>

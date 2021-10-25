@@ -1,0 +1,32 @@
+@import '../../../../variables.less';
+@import '../../../../typography.less';
+
+.profile-wrapper {
+  width: 100%;
+  border-bottom: 1px solid @border-color-base;
+  padding: 10px;
+  background-color: @white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+
+  .icon {}
+
+  .details {
+    width: calc(100% - 40px);
+  }
+}
+
+.status {
+  border-bottom: 1px solid @border-color-base;
+  padding: 5px 10px;
+  background-color: @white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}

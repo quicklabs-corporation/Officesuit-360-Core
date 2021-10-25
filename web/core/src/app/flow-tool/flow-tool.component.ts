@@ -81,7 +81,6 @@ export class FlowToolComponent implements OnInit, AfterViewChecked {
         nzOnOk: () =>
           new Promise((resolve, reject) => {
             this.deleteItem(this.currentItem).then(res => {
-              this.reOrderItems();
               resolve(true);
               if (this.visible) {
                 this.close();
@@ -96,7 +95,7 @@ export class FlowToolComponent implements OnInit, AfterViewChecked {
 
   async deleteItem(item: any): Promise<any> {
     this.removeParentChilds(item);
-    if (item.childs) {
+    if (item.childs.length > 0) {
       this.removeChildsAndSubsequentItems(item);
     }
     this.flowData = this.flowData.filter((each) => each.id !== item.id);
@@ -158,32 +157,35 @@ export class FlowToolComponent implements OnInit, AfterViewChecked {
         this.appendToParentFlow(item, index);
       }
     });
+
+    console.log(JSON.stringify(this.flowData));
   }
 
   appendToParentFlow(item: any, index: any): void {
     const parentData = this.flowData.filter(each => each.id === item.parentId)[0];
-    const parentElement = <HTMLInputElement>document.getElementById(`qlitem${item.parentId}`);
-    const viewPort = parentElement.getBoundingClientRect();
-    console.log('parent', viewPort);
-    if (parentData.childs.length > 0) {
-      const childIndex = parentData.childs.findIndex((child: any) => child.childId === item.id);
-      const parentArrowElement = <HTMLInputElement>document.getElementById(`qlitem${item.parentId}-arrow${childIndex + 1}`);
-      const parentArrowViewPort = parentArrowElement.getBoundingClientRect();
-      console.log(parentArrowViewPort);
-      if (childIndex === 0) {
-        this.flowData[index].styles = {
-          card: {
-            left: `${viewPort.left + viewPort.width + parentArrowViewPort.width}px`,
-            top: `${viewPort.top - 60}px`
-          }
-        };
-      } else {
-        this.flowData[index].styles = {
-          card: {
-            left: `${viewPort.left}px`,
-            top: `${viewPort.top + viewPort.height + parentArrowViewPort.height - 60}px`
-          }
-        };
+    if (parentData) {
+      const parentElement = <HTMLInputElement>document.getElementById(`qlitem${item.parentId}`);
+      const viewPort = parentElement.getBoundingClientRect();
+      if (parentData.childs.length > 0) {
+        const childIndex = parentData.childs.findIndex((child: any) => child.childId === item.id);
+        const parentArrowElement = <HTMLInputElement>document.getElementById(`qlitem${item.parentId}-arrow${childIndex + 1}`);
+        const parentArrowViewPort = parentArrowElement.getBoundingClientRect();
+        console.log(parentArrowViewPort);
+        if (childIndex === 0) {
+          this.flowData[index].styles = {
+            card: {
+              left: `${viewPort.left + viewPort.width + parentArrowViewPort.width}px`,
+              top: `${viewPort.top - 60}px`
+            }
+          };
+        } else {
+          this.flowData[index].styles = {
+            card: {
+              left: `${viewPort.left}px`,
+              top: `${viewPort.top + viewPort.height + parentArrowViewPort.height - 60}px`
+            }
+          };
+        }
       }
     }
 

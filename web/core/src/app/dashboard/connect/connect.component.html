@@ -1,16 +1,13 @@
-<section class="chats">
-    <div class="myprofile p-10">
-        <p class="subhead">Surya Kavutarapu</p>
-    </div>
-    <div class="search-bar">
-        <nz-input-group [nzSuffix]="suffixIconSearch">
-            <input type="text" nz-input placeholder="Search" />
-        </nz-input-group>
-        <ng-template #suffixIconSearch>
-            <i nz-icon nzType="search"></i>
-        </ng-template>
+<section class="chat-wrapper">
+    <div class="chat-wrapper">
+        <ql-chat></ql-chat>
     </div>
     <div class="chat-list">
-
+        <div class="profile">
+            <ql-chat-profile></ql-chat-profile>
+        </div>
+        <div class="people">
+            <ql-people></ql-people>
+        </div>
     </div>
 </section>
