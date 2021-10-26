@@ -191,12 +191,12 @@ td.ant-table-cell {
   color: fade(@black, 35%);
 }
 
-.ant-tabs-content-holder {
-  border: 1px solid #f0f0f0;
-  border-top-width: 0px;
-  padding: 20px;
-  border-radius: 2px;
-}
+// .ant-tabs-content-holder {
+//   border: 1px solid #f0f0f0;
+//   border-top-width: 0px;
+//   padding: 20px;
+//   border-radius: 2px;
+// }
 
 .ant-alert-content .ant-alert-message {
   .base-text();
@@ -326,4 +326,16 @@ td.ant-table-cell {
 
 .highlight {
   color: @primary-color;
+}
+
+.ant-tabs-tab {
+  &.ant-tabs-tab-active {
+    .ant-tabs-tab-btn>a {
+      color: @primary-color;
+    }
+  }
+
+  .ant-tabs-tab-btn>a {
+    color: fade(@black, 80%);
+  }
 }

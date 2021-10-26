@@ -1,0 +1,73 @@
+<div class="profile-wrapper">
+    <div class="profile">
+        <div class="profile-info px-15 py-10">
+            <nz-avatar [nzShape]="'square'" [nzSize]="60" [nzIcon]="'user'"></nz-avatar>
+            <div class="px-20">
+                <p class="subhead mb-10">
+                    Surya Kavutarapu
+                </p>
+                <p>
+                    <span></span>
+                </p>
+            </div>
+        </div>
+        <div class="profile-tabs pl-20">
+            <nz-tabset nzLinkRouter [nzSize]="'small'">
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./profile-overview']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Overview
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./summary']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Summary
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./feedbacks']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Feedback & Reviews
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./leaves']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Leave Requests
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./ctc']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        CTC & Appraisals
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./assets-allocated']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Assets Allocated
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./user-payroll']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Accounts & Options
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['./notices']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Notices
+                    </a>
+                </nz-tab>
+                <nz-tab>
+                    <a *nzTabLink nz-tab-link [routerLink]="['other-user-requests']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
+                        Other Requests
+                    </a>
+                </nz-tab>
+            </nz-tabset>
+        </div>
+    </div>
+</div>
