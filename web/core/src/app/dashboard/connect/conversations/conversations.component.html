@@ -1,0 +1,36 @@
+<div class="header">
+    <span>
+        <span class="cursor">
+            <nz-badge nzDot>
+                <nz-avatar nzSize="small" nzText="S" [nzShape]="'square'">
+                </nz-avatar>
+            </nz-badge>
+            <span class="ml-5 caption1 mr-8">Surya Kavutarapu</span>
+        </span>
+        <span class="cursor"><i nz-icon nzType="star" nzTheme="outline"></i></span>
+    </span>
+    <span>
+        <nz-radio-group [(ngModel)]="radioValue" nzButtonStyle="solid" nzSize="small">
+            <label nz-radio-button nzValue="A" nzTooltipTitle="Conversations" nzTooltipPlacement="bottom"
+                nz-tooltip><i nz-icon nzType="message" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="B" nzTooltipTitle="Emails" nzTooltipPlacement="bottom" nz-tooltip><i
+                    nz-icon nzType="inbox" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="C" nzTooltipTitle="Documents" nzTooltipPlacement="bottom"
+                nz-tooltip><i nz-icon nzType="paper-clip" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="J" nzTooltipTitle="Code Snippets" nzTooltipPlacement="bottom"
+                nz-tooltip><i nz-icon nzType="code-sandbox" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="D" nzTooltipTitle="Requests" nzTooltipPlacement="bottom"
+                nz-tooltip><i nz-icon nzType="api" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="E" nzTooltipTitle="Remainders" nzTooltipPlacement="bottom"
+                nz-tooltip><i nz-icon nzType="bell" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="F" nzTooltipTitle="Profile" nzTooltipPlacement="bottom"
+                nz-tooltip><i nz-icon nzType="user" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="L" nzTooltipTitle="Notes" nzTooltipPlacement="bottom" nz-tooltip><i
+                    nz-icon nzType="edit" nzTheme="outline"></i></label>
+            <label nz-radio-button nzValue="K" nzTooltipTitle="Meeting History" nzTooltipPlacement="bottom"
+                nz-tooltip>
+                <i nz-icon nzType="carry-out" nzTheme="outline"></i>
+            </label>
+        </nz-radio-group>
+    </span>
+</div>

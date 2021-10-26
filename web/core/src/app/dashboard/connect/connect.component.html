@@ -1,6 +1,24 @@
 <section class="chat-wrapper">
-    <div class="chat-wrapper">
-        <ql-chat></ql-chat>
+    <div class="conversations">
+        <nav class="conversations-nav">
+            <div>
+                <span class="subhead mb-0 mr-10">Connect</span>
+                <nz-select [ngModel]="type" (ngModelChange)="loadConversation($event)" nzSize="small"
+                    style="width: 150px;">
+                    <nz-option nzValue="mail" nzLabel="Mailbox"></nz-option>
+                    <nz-option nzValue="conversations" nzLabel="Conversations"></nz-option>
+                </nz-select>
+            </div>
+            <div>
+                <button nz-button class="mr-8" nzSize="small" nzType="default">
+                    Compose mail
+                </button>
+                <button nz-button nzSize="small" nzType="default">
+                    New Message
+                </button>
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
     </div>
     <div class="chat-list">
         <div class="profile">

@@ -1,0 +1,62 @@
+<div class="mail-card">
+    <div class="mail-content">
+
+    </div>
+    <div class="mail-actions p-10">
+        <nz-collapse nzGhost>
+            <nz-collapse-panel [nzExtra]="extraTpl" [nzHeader]="headerTpl" [nzActive]="true">
+                <div class="content px-50 py-10">
+                    <!-- sample content -->
+                    <div lang="en-US" link="#0563C1" vlink="#954F72">
+                        <div>
+                            <p style="font-size:11pt;font-family:Calibri,sans-serif;margin:0;"><span
+                                    style="color:#1F497D;">Please remember to schedule time for this (not sure if Regu
+                                    will show or Mahalingham who is doing checkout this week).</span></p>
+                            <p style="font-size:11pt;font-family:Calibri,sans-serif;margin:0;"><span
+                                    style="color:#1F497D;">&nbsp;</span></p>
+                            <div>
+                                <p style="font-size:11pt;font-family:Calibri,sans-serif;margin:0;"><span
+                                        style="color:#1F497D;"><a href="mailto:Byron.Burke@ku.edu" target="_blank"
+                                            rel="noopener noreferrer" data-auth="NotApplicable" data-linkindex="0"><span
+                                                style="color:#0563C1;">Byron D. Burke</span></a>&nbsp; <a
+                                            href="tel:17858647685" target="_blank" rel="noopener noreferrer"
+                                            data-auth="NotApplicable" data-linkindex="1"><span style="color:#0563C1;">+1
+                                                785 864 7685</span></a> (work / Skype for Business) <a
+                                            href="tel:19132306483" target="_blank" rel="noopener noreferrer"
+                                            data-auth="NotApplicable" data-linkindex="2"><span style="color:#0563C1;">+1
+                                                913 230 6483</span></a> (mobile) </span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions px-15 py-10">
+                    <span class="mx-4 cursor text-muted">
+                        <a href="">Reply</a>
+                    </span>
+                    |
+                    <span class="mr-4 cursor text-muted">
+                        <a href="">Reply All</a>
+                    </span>
+                    |
+                    <span class="mr-4 cursor text-muted">
+                        <a href="">Forward</a>
+                    </span>
+                </div>
+            </nz-collapse-panel>
+            <ng-template #headerTpl>
+                <span>
+                    <nz-badge>
+                        <nz-avatar nzSize="small" nzText="S" [nzShape]="'square'">
+                        </nz-avatar>
+                    </nz-badge>
+                    <span class="ml-5 caption1 mr-8">Surya Kavutarapu</span>
+                </span>
+            </ng-template>
+            <ng-template #extraTpl>
+                <span class="mx-4 cursor text-muted">
+                    {{'11/12/2021' | date: 'dd:MM:yyyy:ss:mm:ss'}}
+                </span>
+            </ng-template>
+        </nz-collapse>
+    </div>
+</div>

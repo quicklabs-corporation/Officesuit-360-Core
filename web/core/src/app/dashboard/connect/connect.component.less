@@ -15,9 +15,21 @@
     background-color: fade(@black, 2%);
   }
 
-  .chat-window {
-    width: calc(100 - 300px);
+  .conversations {
+    width: calc(100% - 300px);
     height: 100%;
-    background-color: @white;
+    background-color: fade(@black, 2%);
+    .conversations-nav {
+      width: 100%;
+      border-bottom: 1px solid @border-color-base;
+      padding: 10px 15px;
+      background-color: @white;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      box-sizing: border-box;
+      height: 60px;
+    }
   }
 }

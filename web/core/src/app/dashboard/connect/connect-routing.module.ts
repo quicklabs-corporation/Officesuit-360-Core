@@ -5,6 +5,16 @@ import { ConnectComponent } from './connect.component';
 const routes: Routes = [{
   path: '',
   component: ConnectComponent,
+  children: [
+    {
+      path: 'conversations',
+      loadChildren: () => import('./conversations/conversations.module').then(m => m.ConversationsModule)
+    },
+    {
+      path: 'mail',
+      loadChildren: () => import('./mailbox/mailbox.module').then(m => m.MailboxModule)
+    }
+  ]
 }];
 
 @NgModule({

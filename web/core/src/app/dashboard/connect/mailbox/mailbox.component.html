@@ -1,0 +1,40 @@
+<div class="header">
+    <span>
+        <nz-radio-group [(ngModel)]="boxtype" nzButtonStyle="solid" nzSize="small">
+            <label nz-radio-button nzValue="inbox">Inbox</label>
+            <label nz-radio-button nzValue="sent">Sent</label>
+            <label nz-radio-button nzValue="draft">Drafts</label>
+            <label nz-radio-button nzValue="deleted">Deleted</label>
+            <label nz-radio-button nzValue="spam">Spam</label>
+        </nz-radio-group>
+    </span>
+    <span class="caption2 text-muted">
+        suryakavutarapu@gmail.com <span class="ml-8">
+            <i nz-icon nzType="setting" class="cursor" nzTheme="outline"></i>
+        </span>
+    </span>
+</div>
+<div class="mail-wrapper">
+    <div class="mail-list">
+        <nz-collapse nzGhost>
+            <nz-collapse-panel [nzHeader]="'Today'" [nzActive]="true">
+                <ql-mail-list-item></ql-mail-list-item>
+                <ql-mail-list-item></ql-mail-list-item>
+            </nz-collapse-panel>
+            <nz-collapse-panel [nzHeader]="'Yesterday'" [nzActive]="true">
+                <ql-mail-list-item></ql-mail-list-item>
+            </nz-collapse-panel>
+        </nz-collapse>
+    </div>
+    <div class="mail-contentviewer">
+        <div class="px-15">
+            <p class="subhead mb-0">Invitation to party</p>
+            <p class="text-muted caption2">
+                Friday, 10:14 PM, 12/11/2021
+            </p>
+        </div>
+        <div>
+            <ql-mail-view></ql-mail-view>
+        </div>
+    </div>
+</div>

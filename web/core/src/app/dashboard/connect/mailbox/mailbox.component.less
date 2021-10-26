@@ -1,0 +1,39 @@
+@import '../../../../variables.less';
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid @border-color-base;
+  padding: 10px 15px;
+  background-color: @white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.mail-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+  border-right: 1px solid @border-color-base;
+  height: calc(100% - 42px);
+  .mail-list {
+    width: 280px;
+    height: 100%;
+    background-color: fade(@black, 2%);
+    overflow-x: hidden;
+    overflow-y: auto
+  }
+
+  .mail-contentviewer {
+    width: calc(100% - 280px);
+    height: 100%;
+    padding: 15px;
+    background-color: fade(@black, 6%);
+    overflow-x: hidden;
+    overflow-y: auto
+  }
+}
