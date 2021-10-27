@@ -12,6 +12,8 @@ import { AssetsAllocatedComponent } from './assets-allocated/assets-allocated.co
 import { PloanandCliamsComponent } from './ploanand-cliams/ploanand-cliams.component';
 import { UserNoticesComponent } from './user-notices/user-notices.component';
 import { OtherRequestsComponent } from './other-requests/other-requests.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { OverviewComponent } from './overview/overview.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { OtherRequestsComponent } from './other-requests/other-requests.componen
     AssetsAllocatedComponent,
     PloanandCliamsComponent,
     UserNoticesComponent,
-    OtherRequestsComponent
+    OtherRequestsComponent,
+    AccountsComponent,
+    OverviewComponent
   ],
   imports: [
     CommonModule,

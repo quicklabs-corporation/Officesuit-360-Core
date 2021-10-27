@@ -1,21 +1,50 @@
 <div class="profile-wrapper">
     <div class="profile">
         <div class="profile-info px-15 py-10">
-            <nz-avatar [nzShape]="'square'" [nzSize]="60" [nzIcon]="'user'"></nz-avatar>
-            <div class="px-20">
-                <p class="subhead mb-10">
-                    Surya Kavutarapu
-                </p>
-                <p>
-                    <span></span>
-                </p>
+            <div nz-row>
+                <div nz-col nzSpan="2">
+                    <nz-avatar [nzShape]="'square'" [nzSize]="60" [nzIcon]="'user'"></nz-avatar>
+                </div>
+                <div nz-col nzSpan="22">
+                    <div>
+                        <div nz-row>
+                            <div nz-col nzSpan="24" class="mb-10">
+                                <span class="subhead  mr-10">Surya Kavutarapu</span>
+                                <nz-tag [nzColor]="'#87d068'">Active</nz-tag>
+                            </div>
+                            <div nz-col nzSpan="6">
+                                <span class="text-muted caption2">
+                                    <i nz-icon nzType="carry-out" nzTheme="outline" class="mr-8"></i>
+                                    {{date | date: 'MMM d, y, h:mm:ss a'}}
+                                </span>
+                            </div>
+                            <div nz-col nzSpan="6">
+                                <span class="text-muted caption2">
+                                    <i nz-icon nzType="environment" nzTheme="outline" class="mr-8"></i> Hyderabad,
+                                    500081.
+                                </span>
+                            </div>
+                            <div nz-col nzSpan="6" class="text-center">
+                                <span class="text-muted caption2">
+                                    <i nz-icon nzType="mail" nzTheme="outline" class="mr-8"></i>
+                                    suryakavutarapu@scriptbees.com
+                                </span>
+                            </div>
+                            <div nz-col nzSpan="6" class="text-center">
+                                <span class="text-muted caption2">
+                                    <i nz-icon nzType="mobile" nzTheme="outline" class="mr-8"></i> +91 9542437709
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="profile-tabs pl-20">
             <nz-tabset nzLinkRouter [nzSize]="'small'">
                 <nz-tab>
-                    <a *nzTabLink nz-tab-link [routerLink]="['./profile-overview']" [queryParams]="{ tab: 'four' }"
-                        queryParamsHandling="merge">
+                    <a *nzTabLink nz-tab-link [routerLink]="['./overview']"
+                        [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
                         Overview
                     </a>
                 </nz-tab>
@@ -26,7 +55,7 @@
                     </a>
                 </nz-tab>
                 <nz-tab>
-                    <a *nzTabLink nz-tab-link [routerLink]="['./feedbacks']" [queryParams]="{ tab: 'four' }"
+                    <a *nzTabLink nz-tab-link [routerLink]="['./feedback']" [queryParams]="{ tab: 'four' }"
                         queryParamsHandling="merge">
                         Feedback & Reviews
                     </a>
@@ -50,19 +79,19 @@
                     </a>
                 </nz-tab>
                 <nz-tab>
-                    <a *nzTabLink nz-tab-link [routerLink]="['./user-payroll']" [queryParams]="{ tab: 'four' }"
+                    <a *nzTabLink nz-tab-link [routerLink]="['./accounts']" [queryParams]="{ tab: 'four' }"
                         queryParamsHandling="merge">
                         Accounts & Options
                     </a>
                 </nz-tab>
                 <nz-tab>
-                    <a *nzTabLink nz-tab-link [routerLink]="['./notices']" [queryParams]="{ tab: 'four' }"
+                    <a *nzTabLink nz-tab-link [routerLink]="['./user-notices']" [queryParams]="{ tab: 'four' }"
                         queryParamsHandling="merge">
                         Notices
                     </a>
                 </nz-tab>
                 <nz-tab>
-                    <a *nzTabLink nz-tab-link [routerLink]="['other-user-requests']" [queryParams]="{ tab: 'four' }"
+                    <a *nzTabLink nz-tab-link [routerLink]="['other']" [queryParams]="{ tab: 'four' }"
                         queryParamsHandling="merge">
                         Other Requests
                     </a>
@@ -70,4 +99,5 @@
             </nz-tabset>
         </div>
     </div>
+    <router-outlet></router-outlet>
 </div>
