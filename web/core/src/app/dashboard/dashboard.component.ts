@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-  selectedModule: string = 'myprofile';
+  selectedModule: string = 'hr';
   constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   }
 
   navigateTo(path: string): void {
+    this.selectedModule = path;
     this.router.navigate([`/dashboard/${path}`]).then(() => {})
   }
 }

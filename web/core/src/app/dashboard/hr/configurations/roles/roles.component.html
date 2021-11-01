@@ -1,0 +1,38 @@
+<ql-info-alert [src]="'role'" [alt]="'Role Management'" [heading]="'Roles, Departments and CTC Management'"
+    [description]="'HR software is designed to delight your employees. Our employee centric user experience coupled with hooks and data.'">
+</ql-info-alert>
+<div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="6">
+        <nz-input-group [nzSuffix]="suffixIconSearch">
+            <input type="text" nz-input placeholder="Search Role" />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+            <i nz-icon nzType="search"></i>
+        </ng-template>
+    </div>
+    <div nz-col class="gutter-row text-right" [nzSpan]="18">
+        <button nz-button nzType="primary">Create Role</button>
+    </div>
+</div>
+<div nz-row [nzGutter]="16" class="mt-20">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-table #smallTable nzSize="small" [nzData]="roles">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>No of Employees</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of roles">
+                    <td>{{ data?.name }}</td>
+                    <td>{{ data?.description }}</td>
+                    <td>{{ data?.count }}</td>
+                    <td>{{ data?.count }}</td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>
+</div>

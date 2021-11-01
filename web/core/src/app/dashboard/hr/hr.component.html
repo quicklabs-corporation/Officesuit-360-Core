@@ -1,1 +1,49 @@
-<p>hr works!</p>
+<div class="hr-wrapper">
+    <div class="nav">
+        <nz-tabset nzLinkRouter [nzSize]="'small'" [nzLinkRouter]="true" [nzLinkExact]="false">
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./analytics']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Analytics
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./hiring']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Hiring
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./attandance']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Leaves & Attandance Management
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./legaldocuments']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Legal documents
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./onboarding']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Onboarding & Exits
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./organization']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Organization Structure
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./configurations']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Configurations
+                </a>
+            </nz-tab>
+        </nz-tabset>
+    </div>
+    <router-outlet></router-outlet>
+</div>

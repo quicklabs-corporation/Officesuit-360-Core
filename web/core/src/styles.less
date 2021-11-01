@@ -149,10 +149,10 @@ nz-date-picker {
 }
 
 th.ant-table-cell {
-  .label();
+  .footnote();
   margin-bottom: 0px;
   display: table-cell !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 td.ant-table-cell {
@@ -188,7 +188,7 @@ td.ant-table-cell {
 }
 
 .text-muted {
-  color: fade(@black, 35%);
+  color: fade(@black, 60%);
 }
 
 // .ant-tabs-content-holder {
@@ -332,14 +332,20 @@ td.ant-table-cell {
   &.ant-tabs-tab-active {
     box-shadow: 0px -2px 0px 0px @primary-color inset;
 
-    .ant-tabs-tab-btn>a {
+    .ant-tabs-tab-btn>a,
+    &:hover {
       color: @primary-color;
     }
   }
 
-  .ant-tabs-tab-btn>a {
+  .ant-tabs-tab-btn {
     font-size: 13px;
-    color: fade(@black, 80%);
+
+    >a,
+    &:hover {
+      color: fade(@black, 80%);
+    }
+
   }
 }
 
@@ -370,4 +376,18 @@ td.ant-table-cell {
 
 .br-circle {
   border-radius: 50%;
+}
+
+
+// alert info
+.ant-alert-info {
+  background-color: @white;
+  border: 1px solid @border-color-base;
+}
+
+.custom {
+  .ant-tabs-nav-wrap {
+    padding: 0px 20px;
+    background-color: fade(@black, 2%);
+  }
 }

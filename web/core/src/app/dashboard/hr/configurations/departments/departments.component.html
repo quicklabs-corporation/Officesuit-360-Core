@@ -1,0 +1,34 @@
+
+    <div nz-row [nzGutter]="16">
+        <div nz-col class="gutter-row" [nzSpan]="6">
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" nz-input placeholder="Search Item" />
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+                <i nz-icon nzType="search"></i>
+            </ng-template>
+        </div>
+        <div nz-col class="gutter-row text-right" [nzSpan]="18">
+            <button nz-button nzType="primary">Create</button>
+        </div>
+    </div>
+    <div nz-row [nzGutter]="16" class="mt-20">
+        <div nz-col class="gutter-row" [nzSpan]="24">
+            <nz-table nzSize="small" [nzData]="departments">
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of departments">
+                        <td>{{ data?.name }}</td>
+                        <td>{{ data?.description }}</td>
+                        <td>{{ data?.status }}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </div>
+    </div>

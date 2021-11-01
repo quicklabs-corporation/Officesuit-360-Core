@@ -1,0 +1,17 @@
+<div class="mb-10">
+    <nz-alert nzType="info" nzCloseable [nzMessage]="alert" (nzOnClose)="afterClose()"></nz-alert>
+
+    <ng-template #alert>
+        <div nz-row>
+            <div nz-col nzSpan="2" class="text-center">
+                <ql-custom-icon [src]="src" [small]="false" [alt]="alt"></ql-custom-icon>
+            </div>
+            <div nz-col nzSpan="22">
+                <p class="subhead mb-0">{{heading}}</p>
+                <p class="footnote mb-0">
+                    {{description}}
+                </p>
+            </div>
+        </div>
+    </ng-template>
+</div>

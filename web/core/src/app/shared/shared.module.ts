@@ -60,6 +60,8 @@ import { TextComponent } from './design/components/text/text.component';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { InfoAlertComponent } from './components/info-alert/info-alert.component';
+import { CustomIconComponent } from './components/custom-icon/custom-icon.component';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -72,7 +74,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
 @NgModule({
   declarations: [
     SharedComponent,
-    TextComponent
+    TextComponent,
+    InfoAlertComponent,
+    CustomIconComponent
   ],
   imports: [
     NzSelectModule,
@@ -190,7 +194,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzSwitchModule,
     TextComponent,
     NzDropDownModule,
-    NzToolTipModule
+    NzToolTipModule,
+    InfoAlertComponent,
+    CustomIconComponent
   ],
   providers: [{
     provide: NZ_ICONS,
