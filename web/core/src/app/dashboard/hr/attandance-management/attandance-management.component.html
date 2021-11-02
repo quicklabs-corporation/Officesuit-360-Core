@@ -1,25 +1,22 @@
 <nz-tabset class="custom" [nzSize]="'small'">
     <nz-tab nzTitle="Attendance Overview">
         <div class="p-20">
-            <ql-info-alert [src]="'attendance'" [alt]="'attendance'"
-                [heading]="'Time tracking that doesn’t feel like micromanaging.'"
-                [description]="'Move faster on a recruiting platform that automates process and manual tasks, like scheduling interviews and getting approvals.'">
-            </ql-info-alert>
+            <ql-attendence-overview></ql-attendence-overview>
         </div>
     </nz-tab>
     <nz-tab nzTitle="Leave Policies">
         <div class="p-20">
-
+            <ql-leave-policies></ql-leave-policies>
         </div>
     </nz-tab>
     <nz-tab nzTitle="Shift Management">
         <div class="p-20">
-
+            <ql-shifts-management></ql-shifts-management>
         </div>
     </nz-tab>
     <nz-tab nzTitle="Device Integrations">
         <div class="p-20">
-
+            <ql-device-integrations></ql-device-integrations>
         </div>
     </nz-tab>
 </nz-tabset>

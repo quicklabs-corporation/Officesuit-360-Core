@@ -1,6 +1,17 @@
-<div class="px-20 pt-10">
-    <ql-info-alert [src]="'hr'" [alt]="'HR Management'"
-        [heading]="'HR software that employees love and use everyday.'"
-        [description]="'HR software is designed to delight your employees. Our employee centric user experience coupled with hooks and data insights always piques your employees curiosity and adopt the platform.'">
-    </ql-info-alert>
-</div>
+<nz-tabset class="custom" [nzSize]="'small'">
+    <nz-tab nzTitle="Templates">
+        <div class="p-20">
+            <ql-document-templates></ql-document-templates>
+        </div>
+    </nz-tab>
+    <nz-tab nzTitle="Request File">
+        <div class="p-20">
+            <ql-request-sent></ql-request-sent>
+        </div>
+    </nz-tab>
+    <nz-tab nzTitle="Approve File">
+        <div class="p-20">
+            <ql-forapproval></ql-forapproval>
+        </div>
+    </nz-tab>
+</nz-tabset>

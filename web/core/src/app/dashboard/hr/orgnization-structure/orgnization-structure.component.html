@@ -1,6 +1,12 @@
-<div class="px-20 pt-10">
-    <ql-info-alert [src]="'org-structure'" [alt]="'Organization Struture'"
-        [heading]="'HR software that employees love and use everyday.'"
-        [description]="'HR software is designed to delight your employees. Our employee centric user experience coupled with hooks and data insights always.'">
-    </ql-info-alert>
-</div>
+<nz-tabset class="custom" [nzSize]="'small'">
+    <nz-tab nzTitle="Corporate Hierarchy">
+        <div class="p-20">
+            <ql-corporate-hierarchy></ql-corporate-hierarchy>
+        </div>
+    </nz-tab>
+    <nz-tab nzTitle="Branch Offices">
+        <div class="p-20">
+            <ql-brances-offices></ql-brances-offices>
+        </div>
+    </nz-tab>
+</nz-tabset>
