@@ -1,1 +1,61 @@
-<p>accounts works!</p>
+<div class="accounts-wrapper">
+    <div class="nav">
+        <nz-tabset nzLinkRouter [nzSize]="'small'" [nzLinkRouter]="true" [nzLinkExact]="false">
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./overview']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Overview
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./payroll']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Payroll Management
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./vendors']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Vendors
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./invoices-estimates']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Invoices & Estimates
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./sales-purchases']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Sales & Purchases
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./accounting']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Accounting
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./assets-management']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Assets Management
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./excemptions']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Excemptions
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./configurations']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Configurations
+                </a>
+            </nz-tab>
+        </nz-tabset>
+    </div>
+    <router-outlet></router-outlet>
+</div>

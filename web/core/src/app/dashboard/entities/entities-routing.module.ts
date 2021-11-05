@@ -4,7 +4,11 @@ import { EntitiesComponent } from './entities.component';
 
 const routes: Routes = [{
   path: '',
-  component: EntitiesComponent
+  component: EntitiesComponent,
+  children: [{
+    path: 'project/:id',
+    loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
+  }]
 }];
 
 @NgModule({

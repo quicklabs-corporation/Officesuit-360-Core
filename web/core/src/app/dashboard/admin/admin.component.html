@@ -1,1 +1,43 @@
-<p>admin works!</p>
+<div class="admin-wrapper">
+    <div class="nav">
+        <nz-tabset nzLinkRouter [nzSize]="'small'" [nzLinkRouter]="true" [nzLinkExact]="false">
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./overview']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Overview
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./insurance-policies']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Health Insurance & Policies
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./assets-tracking']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Physical Assets / Tracking
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./subscriptions']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Subscriptions & Payments
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./requests']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Requests
+                </a>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['./configurations']" [queryParams]="{ tab: 'four' }"
+                    queryParamsHandling="merge">
+                    Configurations
+                </a>
+            </nz-tab>
+        </nz-tabset>
+    </div>
+    <router-outlet></router-outlet>
+</div>
