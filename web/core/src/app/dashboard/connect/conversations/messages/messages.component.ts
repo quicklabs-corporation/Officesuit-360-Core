@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages.component.less']
 })
 export class MessagesComponent implements OnInit {
-
+  boxtype!: string;
   constructor() { }
 
   ngOnInit(): void {

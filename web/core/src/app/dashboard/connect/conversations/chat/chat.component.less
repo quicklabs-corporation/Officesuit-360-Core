@@ -1,0 +1,50 @@
+@import '../../../../../variables.less';
+
+.chat-block {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 150px;
+  position: relative;
+
+  .chat-editor {
+    width: 100%;
+    min-height: 150px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    position: absolute;
+    left: 0;
+    background-color: fade(@black, 6%);
+    right: 0;
+    bottom: 0;
+  }
+
+  .chat-container {
+    width: 100%;
+    background-color: fade(@black, 6%);
+    height: 100%;
+    padding: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .chat-message {
+      width: 100%;
+      padding: 10px 0px;
+      display: flex;
+      flex-direction: row;
+      &.reverse {
+          flex-direction: row-reverse;
+
+      }
+      .message {
+        min-width: 100px;
+        padding: 15px;
+        background-color: @white;
+        border-radius: 2px;
+        max-width: 75%;
+        .user {
+            font-size: 11px;
+        }
+      }
+    }
+  }
+}

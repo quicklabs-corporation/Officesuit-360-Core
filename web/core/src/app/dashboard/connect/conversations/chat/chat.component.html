@@ -1,1 +1,39 @@
-<p>chat works!</p>
+<div class="chat-block">
+    <div class="chat-container">
+        <div class="chat-message">
+            <nz-badge class="mt-5">
+                <nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar>
+            </nz-badge>
+            <div class="message ml-10">
+                <p class="user mb-5">
+                    <strong>Kavutarapu, Surya Teja</strong>
+                    <span class="text-muted ml-8">
+                        Yesterday 13:17
+                    </span>
+                </p>
+                <p class="mb-0 caption1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis recusandae eius ipsam quos dicta
+                </p>
+            </div>
+        </div>
+        <div class="chat-message reverse">
+            <nz-badge class="mt-5">
+                <nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar>
+            </nz-badge>
+            <div class="message mr-10">
+                <p class="user mb-5 text-right">
+                    <strong>Kavutarapu, Surya Teja</strong>
+                    <span class="text-muted ml-8">
+                        Yesterday 13:17
+                    </span>
+                </p>
+                <p class="mb-0 caption1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis recusandae eius ipsam quos dicta
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="chat-editor px-57 py-10">
+        <ql-editor></ql-editor>
+    </div>
+</div>

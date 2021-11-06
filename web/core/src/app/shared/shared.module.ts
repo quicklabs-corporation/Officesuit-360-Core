@@ -61,6 +61,10 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { InfoAlertComponent } from './components/info-alert/info-alert.component';
 import { CustomIconComponent } from './components/custom-icon/custom-icon.component';
+import { EditorComponent } from './components/editor/editor.component';
+import { QuillModule } from 'ngx-quill';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -75,10 +79,13 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     SharedComponent,
     TextComponent,
     InfoAlertComponent,
-    CustomIconComponent
+    CustomIconComponent,
+    EditorComponent
   ],
   imports: [
     NzSelectModule,
+    QuillModule.forRoot(),
+    CKEditorModule,
     NzDrawerModule,
     CommonModule,
     NzAlertModule,
@@ -135,7 +142,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzPopconfirmModule,
     NzSwitchModule,
     NzMessageModule,
-    NzPaginationModule
+    NzPaginationModule,
+    NzCalendarModule,
   ],
   exports: [
     NzSelectModule,
@@ -193,7 +201,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzDropDownModule,
     NzToolTipModule,
     InfoAlertComponent,
-    CustomIconComponent
+    CustomIconComponent,
+    EditorComponent,
+    NzCalendarModule
   ],
   providers: [{
     provide: NZ_ICONS,

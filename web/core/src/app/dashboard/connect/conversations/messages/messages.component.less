@@ -1,0 +1,28 @@
+@import '../../../../../variables.less';
+
+.mail-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    border-right: 1px solid @border-color-base;
+    height: calc(100% - 42px);
+    .mail-list {
+      width: 280px;
+      height: 100%;
+      background-color: #fafafa;
+      overflow-x: hidden;
+      overflow-y: auto
+    }
+  
+    .mail-contentviewer {
+      width: calc(100% - 280px);
+      height: 100%;
+      padding: 15px;
+      background-color: #efefef;
+      overflow-x: hidden;
+      overflow-y: auto
+    }
+  }
+  
