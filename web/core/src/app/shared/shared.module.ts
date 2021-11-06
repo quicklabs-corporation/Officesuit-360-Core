@@ -43,7 +43,6 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzTreeModule } from 'ng-zorro-antd/tree';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
@@ -123,7 +122,6 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzTabsModule,
     NzStepsModule,
     NzPopoverModule,
-    LeafletModule,
     NzTagModule,
     NzUploadModule,
     NzStatisticModule,
@@ -181,7 +179,6 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzCardModule,
     NzPopoverModule,
     NzStepsModule,
-    LeafletModule,
     NzTagModule,
     NzUploadModule,
     NzNotificationModule,
