@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-  selectedModule: string = 'accounts';
+  selectedModule: string = 'connect';
   constructor(private readonly router: Router) { }
 
   ngOnInit(): void {

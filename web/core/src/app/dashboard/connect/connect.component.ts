@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./connect.component.less']
 })
 export class ConnectComponent implements OnInit {
-  type: string = 'mail';
+  type: string = 'conversations';
 
   constructor(private readonly router: Router) { }
 

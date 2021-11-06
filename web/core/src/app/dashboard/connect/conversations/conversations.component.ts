@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conversations.component.less']
 })
 export class ConversationsComponent implements OnInit {
-  radioValue = 'A';
+  type = 'chat';
   constructor() { }
 
   ngOnInit(): void {
