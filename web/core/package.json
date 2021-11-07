@@ -23,6 +23,8 @@
     "@ant-design/icons": "^4.6.2",
     "@ckeditor/ckeditor5-angular": "^2.0.2",
     "@ckeditor/ckeditor5-build-classic": "^31.0.0",
+    "angular-calendar": "^0.28.28",
+    "date-fns": "^2.25.0",
     "ng-zorro-antd": "^12.0.2",
     "ng2-mqtt": "^0.1.2",
     "ngx-logger": "^4.2.1",

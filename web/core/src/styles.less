@@ -54,6 +54,16 @@ body {
     margin-left:~"@{i}px";
   }
 
+  .mx-@{i} {
+    margin-left:~"@{i}px";
+    margin-right:~"@{i}px";
+  }
+
+  .my-@{i} {
+    margin-top:~"@{i}px";
+    margin-bottom:~"@{i}px";
+  }
+
   .p-@{i} {
     padding:~"@{i}px";
   }
@@ -84,7 +94,21 @@ body {
     padding-left:~"@{i}px";
   }
 
+  .fs-@{i} {
+    font-size:~"@{i}px";
+  }
+
+  .br-@{i} {
+    border-radius:~"@{i}px";
+  }
+
   .util-loop(@i - 1);
+}
+
+.highlight {
+  &:hover {
+    color: @primary-color;
+  }
 }
 
 .util-loop (@iterations);
@@ -315,17 +339,13 @@ td.ant-table-cell {
 
 .cursor {
   cursor: pointer;
+  .highlight();
 }
 
 .ant-collapse>.ant-collapse-item>.ant-collapse-header,
 .ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
   padding-top: 6px;
   padding-bottom: 6px;
-}
-
-
-.highlight {
-  color: @primary-color;
 }
 
 .ant-tabs-tab {
@@ -410,4 +430,10 @@ td.ant-table-cell {
 
 .ql-container.ql-snow {
   background-color: @white;
+}
+
+
+.ant-empty-image {
+  height: 64px;
+  opacity: 0.6;
 }

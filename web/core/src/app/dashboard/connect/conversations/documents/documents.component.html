@@ -1,1 +1,38 @@
-<p>documents works!</p>
+<div class="documents-wrapper">
+    <div class="documents">
+        <div class="bg-white px-15 py-10 bb">
+            <div nz-row [nzGutter]="16">
+                <div nz-col [nzSpan]="6" class="text-left">
+                    <p class="my-5 subhead">
+                        Documents
+                    </p>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-center">
+                    <nz-input-group [nzSuffix]="suffixIconSearch">
+                        <input type="text" nz-input placeholder="Search by document name" />
+                    </nz-input-group>
+                    <ng-template #suffixIconSearch>
+                        <i nz-icon nzType="search"></i>
+                    </ng-template>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                    <button nz-button nzType="primary" class="mr-8"><i nz-icon nzType="paper-clip"
+                            nzTheme="outline"></i></button>
+                    <button nz-button nzType="default"><i nz-icon nzType="filter" nzTheme="outline"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white px-15 py-30">
+            <nz-empty nzNotFoundImage="/assets/icons/no-files.png" [nzNotFoundContent]="contentTpl"></nz-empty>
+            <ng-template #contentTpl>
+                <span>
+                    No Documents Shared.
+                </span>
+            </ng-template>
+        </div>
+
+        <div class="mt-10">
+            <ql-document></ql-document>
+        </div>
+    </div>
+</div>

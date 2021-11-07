@@ -3,17 +3,16 @@
         <nav class="conversations-nav">
             <div>
                 <span class="subhead mb-0 mr-10">Connect</span>
-                <nz-select [ngModel]="type" (ngModelChange)="loadConversation($event)" nzSize="small"
-                    style="width: 150px;">
+                <nz-select [ngModel]="type" (ngModelChange)="loadConversation($event)" style="width: 150px;">
                     <nz-option nzValue="mail" nzLabel="Mailbox"></nz-option>
                     <nz-option nzValue="conversations" nzLabel="Conversations"></nz-option>
                 </nz-select>
             </div>
             <div>
-                <button nz-button class="mr-8" nzSize="small" nzType="default">
+                <button nz-button class="mr-8" nzType="primary">
                     Compose mail
                 </button>
-                <button nz-button nzSize="small" nzType="default">
+                <button nz-button nzType="primary">
                     New Message
                 </button>
             </div>

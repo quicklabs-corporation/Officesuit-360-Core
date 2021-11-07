@@ -65,6 +65,7 @@ import { EditorComponent } from './components/editor/editor.component';
 import { QuillModule } from 'ngx-quill';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { DocumentComponent } from './component/document/document.component';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -80,7 +81,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     TextComponent,
     InfoAlertComponent,
     CustomIconComponent,
-    EditorComponent
+    EditorComponent,
+    DocumentComponent
   ],
   imports: [
     NzSelectModule,
@@ -115,7 +117,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzInputNumberModule,
     FormsModule,
     NzListModule,
-    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
+    ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
     NzCheckboxModule,
     NzModalModule,
     NzStatisticModule,
@@ -203,7 +205,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     InfoAlertComponent,
     CustomIconComponent,
     EditorComponent,
-    NzCalendarModule
+    NzCalendarModule,
+    DocumentComponent
   ],
   providers: [{
     provide: NZ_ICONS,

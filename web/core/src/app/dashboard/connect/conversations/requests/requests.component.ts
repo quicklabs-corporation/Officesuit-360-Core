@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./requests.component.less']
 })
 export class RequestsComponent implements OnInit {
-
+  requestStatus: string = 'all';
   constructor() { }
 
   ngOnInit(): void {

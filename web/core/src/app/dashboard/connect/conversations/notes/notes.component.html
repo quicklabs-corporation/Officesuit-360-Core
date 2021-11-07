@@ -1,1 +1,63 @@
-<p>notes works!</p>
+<div class="notes-wrapper">
+    <div class="notes">
+        <div class="bg-white px-15 py-10 bb">
+            <div nz-row [nzGutter]="16">
+                <div nz-col [nzSpan]="6" class="text-left">
+                    <p class="my-5 subhead">
+                        Notes
+                    </p>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-center">
+                    <nz-input-group [nzSuffix]="suffixIconSearch">
+                        <input type="text" nz-input placeholder="Search Notes" />
+                    </nz-input-group>
+                    <ng-template #suffixIconSearch>
+                        <i nz-icon nzType="search"></i>
+                    </ng-template>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                    <button nz-button nzType="primary" class="mr-8"><i nz-icon nzType="plus"
+                            nzTheme="outline"></i></button>
+                    <button nz-button nzType="default"><i nz-icon nzType="more" nzTheme="outline"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white px-15 py-30">
+            <nz-empty nzNotFoundImage="/assets/icons/no-notes.png" [nzNotFoundContent]="contentTpl"></nz-empty>
+            <ng-template #contentTpl>
+                <span>
+                    No Notes Created.
+                </span>
+            </ng-template>
+        </div>
+        <div class="bg-white p-15 my-10">
+            <div class="notes-card">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col [nzSpan]="2" class="text-center">
+                        <i nz-icon nzType="book" class="fs-24" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col [nzSpan]="16">
+                        <p class="caption1 mb-0" nz-typography nzEllipsis>
+                            <Strong>
+                                Meeting Agenda
+                            </Strong>
+                        </p>
+                        <p class="fs-14 mb-0" nz-typography nzEllipsis>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+                        </p>
+                    </div>
+                    <div nz-col [nzSpan]="6" class="text-right">
+                        <div class="mt-5">
+                            <button nz-button nzType="default" class="mr-8"><i nz-icon nzType="edit"
+                                    nzTheme="outline"></i></button>
+                            <button nz-button nzType="default"><i nz-icon nzType="delete"
+                                    nzTheme="outline"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

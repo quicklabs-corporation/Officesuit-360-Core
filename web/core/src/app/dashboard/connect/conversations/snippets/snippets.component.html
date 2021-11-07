@@ -1,1 +1,60 @@
-<p>snippets works!</p>
+<div class="snippets-wrapper">
+    <div class="snippets">
+        <div class="bg-white px-15 py-10 bb">
+            <div nz-row [nzGutter]="16">
+                <div nz-col [nzSpan]="6" class="text-left">
+                    <p class="my-5 subhead">
+                        Code Snippets
+                    </p>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-center">
+                    <nz-input-group [nzSuffix]="suffixIconSearch">
+                        <input type="text" nz-input placeholder="Search Snippet" />
+                    </nz-input-group>
+                    <ng-template #suffixIconSearch>
+                        <i nz-icon nzType="search"></i>
+                    </ng-template>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                    <button nz-button nzType="primary"><i nz-icon nzType="plus"
+                            nzTheme="outline"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white px-15 py-30">
+            <nz-empty nzNotFoundImage="/assets/icons/no-snippets.png" [nzNotFoundContent]="contentTpl"></nz-empty>
+            <ng-template #contentTpl>
+                <span>
+                    No snippets shared.
+                </span>
+            </ng-template>
+        </div>
+        <div class="bg-white p-15 my-10">
+            <div class="notes-card">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col [nzSpan]="2" class="text-center">
+                        <i nz-icon nzType="code" class="fs-24" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col [nzSpan]="16">
+                        <p class="caption1 mb-0" nz-typography nzEllipsis>
+                            <Strong>
+                                Nz Zerro Calender Component
+                            </Strong>
+                        </p>
+                        <p class="fs-12 text-muted mb-0">
+                            Javascript
+                        </p>
+                    </div>
+                    <div nz-col [nzSpan]="6" class="text-right">
+                        <div class="mt-5">
+                            <button nz-button nzType="default" class="mr-8"><i nz-icon nzType="edit"
+                                    nzTheme="outline"></i></button>
+                            <button nz-button nzType="default"><i nz-icon nzType="delete"
+                                    nzTheme="outline"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

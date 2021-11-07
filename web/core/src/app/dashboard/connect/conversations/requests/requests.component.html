@@ -1,1 +1,154 @@
-<p>requests works!</p>
+<div class="requests-wrapper">
+    <div class="requests">
+        <div class="bg-white px-15 py-10 bb">
+            <div nz-row [nzGutter]="16">
+                <div nz-col [nzSpan]="6" class="text-left">
+                    <p class="my-5 subhead">
+                        Requests
+                    </p>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-center">
+                    <nz-radio-group [(ngModel)]="requestStatus" nzButtonStyle="solid">
+                        <label nz-radio-button nzValue="all">All</label>
+                        <label nz-radio-button nzValue="open">Open</label>
+                        <label nz-radio-button nzValue="hold">Hold</label>
+                        <label nz-radio-button nzValue="closed">Closed</label>
+                    </nz-radio-group>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                    <button nz-button nzType="primary" class="mr-8"><i nz-icon nzType="calendar"
+                            nzTheme="outline"></i></button>
+                    <button nz-button nzType="default"><i nz-icon nzType="filter" nzTheme="outline"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white px-15 py-30">
+            <nz-empty nzNotFoundImage="/assets/icons/no-requests.png" [nzNotFoundContent]="contentTpl"></nz-empty>
+            <ng-template #contentTpl>
+                <span>
+                    No Requests
+                </span>
+            </ng-template>
+        </div>
+        <div class="bg-white mt-10">
+            <div class="request-card p-10">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col class="text-center" [nzSpan]="2">
+                        <i nz-icon class="fs-24" nzType="field-time" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col [nzSpan]="22">
+                        <p class="caption1 mb-5" nz-typography nzEllipsis>
+                            <strong>Support Request for Assistance</strong>
+                        </p>
+                        <p class="caption1 mb-5 text-muted" nz-typography nzEllipsis>
+                            Project: Internsi, This requires high atten
+                        </p>
+                        <p class="fs-14 mb-0" nz-typography nzEllipsis nzExpandable [nzEllipsisRows]="2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+                        </p>
+                    </div>
+                </div>
+                <div class="bt p-10 pb-0 mt-10">
+                    <button nz-button nzType="primary" class="mr-8">View Request</button>
+                    <button nz-button nzType="default">Quick Actions</button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white mt-10">
+            <div class="request-card p-10">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col class="text-center" [nzSpan]="2">
+                        <i nz-icon class="fs-24" nzType="field-time" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col [nzSpan]="22">
+                        <p class="caption1 mb-5" nz-typography nzEllipsis>
+                            <strong>Support Request for Assistance</strong>
+                        </p>
+                        <p class="caption1 mb-5 text-muted" nz-typography nzEllipsis>
+                            Project: Internsi, This requires high atten
+                        </p>
+                        <p class="fs-14 mb-0" nz-typography nzEllipsis nzExpandable [nzEllipsisRows]="2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+                        </p>
+                    </div>
+                </div>
+                <div class="bt p-10 pb-0 mt-10">
+                    <button nz-button nzType="primary" class="mr-8">View Request</button>
+                    <button nz-button nzType="default">Quick Actions</button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white mt-10">
+            <div class="request-card p-10">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col class="text-center" [nzSpan]="2">
+                        <i nz-icon class="fs-24" nzType="field-time" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col [nzSpan]="22">
+                        <p class="caption1 mb-5" nz-typography nzEllipsis>
+                            <strong>Support Request for Assistance</strong>
+                        </p>
+                        <p class="caption1 mb-5 text-muted" nz-typography nzEllipsis>
+                            Project: Internsi, This requires high atten
+                        </p>
+                        <p class="fs-14 mb-0" nz-typography nzEllipsis nzExpandable [nzEllipsisRows]="2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+                        </p>
+                    </div>
+                </div>
+                <div class="bt p-10 pb-0 mt-10">
+                    <button nz-button nzType="primary" class="mr-8">View Request</button>
+                    <button nz-button nzType="default">Quick Actions</button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white mt-10">
+            <div class="request-card p-10">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col class="text-center" [nzSpan]="2">
+                        <i nz-icon class="fs-24" nzType="field-time" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col [nzSpan]="22">
+                        <p class="caption1 mb-5" nz-typography nzEllipsis>
+                            <strong>Support Request for Assistance</strong>
+                        </p>
+                        <p class="caption1 mb-5 text-muted" nz-typography nzEllipsis>
+                            Project: Internsi, This requires high atten
+                        </p>
+                        <p class="fs-14 mb-0" nz-typography nzEllipsis nzExpandable [nzEllipsisRows]="2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam perspiciatis commodi
+                            accusamus sequi harum! Deserunt quas, ea nobis ipsa aspernatur, placeat explicabo cumque
+                            voluptates obcaecati, molestias tempora voluptatem quidem!
+                        </p>
+                    </div>
+                </div>
+                <div class="bt p-10 pb-0 mt-10">
+                    <button nz-button nzType="primary" class="mr-8">View Request</button>
+                    <button nz-button nzType="default">Quick Actions</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
