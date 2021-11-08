@@ -171,20 +171,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less",
-              "src/assets/leaflet/leaflet.css",
-              "src/assets/leaflet/esri-leaflet-geocoder.css",
-              "src/assets/leaflet/cluster/MarkerCluster.css",
-              "src/assets/leaflet/cluster/MarkerCluster.Default.css"
+              "src/styles.less"
             ],
             "scripts": [
-              "src/assets/leaflet/leaflet.js",
-              "src/assets/leaflet/leaflet-bing-layer.js",
-              "src/assets/leaflet/esri-leaflet.js",
-              "src/assets/leaflet/esri-leaflet-geocoder.js",
-              "src/assets/leaflet/cluster/leaflet.markercluster.js",
-              "src/assets/leaflet/leaflet-corridor.js",
-              "src/assets/leaflet/leaflet.rotatedMarker.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
             ]
           }
         },
