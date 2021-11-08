@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
+import {HotkeyModule} from 'angular2-hotkeys';
 
 import * as AllIcons from '@ant-design/icons-angular/icons';
 
@@ -39,6 +40,7 @@ registerLocaleData(en);
     AppRoutingModule,
     HttpClientModule,
     NzIconModule.forRoot(icons),
+    HotkeyModule.forRoot(),
     BrowserAnimationsModule
   ],
   providers: [{

@@ -66,6 +66,9 @@ import { QuillModule } from 'ngx-quill';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { DocumentComponent } from './component/document/document.component';
+import { NewChatComponent } from './components/new-chat/new-chat.component';
+import { NewMessageComponent } from './components/new-message/new-message.component';
+import { HotkeyModule } from 'angular2-hotkeys';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -82,7 +85,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     InfoAlertComponent,
     CustomIconComponent,
     EditorComponent,
-    DocumentComponent
+    DocumentComponent,
+    NewChatComponent,
+    NewMessageComponent
   ],
   imports: [
     NzSelectModule,
@@ -95,6 +100,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzProgressModule,
     NzEmptyModule,
     NzRadioModule,
+    HotkeyModule,
     RouterModule,
     NzToolTipModule,
     NzAvatarModule,
@@ -154,6 +160,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzSkeletonModule,
     NzListModule,
     NzEmptyModule,
+    HotkeyModule,
     NzButtonModule,
     NzResultModule,
     NzTypographyModule,
@@ -206,7 +213,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     CustomIconComponent,
     EditorComponent,
     NzCalendarModule,
-    DocumentComponent
+    DocumentComponent,
+    NewChatComponent,
+    NewMessageComponent
   ],
   providers: [{
     provide: NZ_ICONS,
