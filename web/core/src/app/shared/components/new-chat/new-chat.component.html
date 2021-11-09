@@ -1,21 +1,14 @@
-<button nz-button nzType="primary" (click)="showModal()">
-    New Message
-</button>
-
-<nz-modal [(nzVisible)]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent" [nzFooter]="modalFooter"
-    (nzOnCancel)="handleCancel()">
-    <ng-template #modalTitle>
-        <p class="mb-0 subhead">
-            New conversation
-        </p>
-    </ng-template>
-
+<nz-modal [(nzVisible)]="visible" [nzTitle]="modalTitle" [nzFooter]="null" [nzContent]="modalContent"
+    (nzOnCancel)="close()">
+    <ng-template #modalTitle>Start Conversation</ng-template>
     <ng-template #modalContent>
-        
-    </ng-template>
-
-    <ng-template #modalFooter>
-        <button nz-button nzType="default" (click)="handleCancel()"></button>
-        <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Send Message</button>
+        <div nz-row [nzGutter]="16">
+            <div nz-col class="gutter-row" [nzSpan]="18">
+                <input autofocus nz-input placeholder="Enter Name" />
+            </div>
+            <div nz-col class="gutter-row" [nzSpan]="6">
+                <button nz-button nzBlock nzType="primary">Go</button>
+            </div>
+        </div>
     </ng-template>
 </nz-modal>

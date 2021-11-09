@@ -9,8 +9,12 @@
                 </nz-select>
             </div>
             <div>
-                <ql-new-message class="mr-8"></ql-new-message>
-                <ql-new-chat></ql-new-chat>
+                <button nz-button nzType="primary" class="mr-8" (click)="createConversation()">
+                    New message
+                </button>
+                <button nz-button nzType="primary" (click)="composeMail()">
+                    Compose mail
+                </button>
             </div>
         </nav>
         <router-outlet></router-outlet>

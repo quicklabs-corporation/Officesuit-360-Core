@@ -65,10 +65,11 @@ import { EditorComponent } from './components/editor/editor.component';
 import { QuillModule } from 'ngx-quill';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
-import { DocumentComponent } from './component/document/document.component';
+import { DocumentComponent } from './components/document/document.component';
+import { HotkeyModule } from 'angular2-hotkeys';
 import { NewChatComponent } from './components/new-chat/new-chat.component';
 import { NewMessageComponent } from './components/new-message/new-message.component';
-import { HotkeyModule } from 'angular2-hotkeys';
+import { NzMentionModule } from 'ng-zorro-antd/mention';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -152,6 +153,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzMessageModule,
     NzPaginationModule,
     NzCalendarModule,
+    NzMentionModule
   ],
   exports: [
     NzSelectModule,
@@ -215,7 +217,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzCalendarModule,
     DocumentComponent,
     NewChatComponent,
-    NewMessageComponent
+    NewMessageComponent,
+    NzMentionModule
   ],
   providers: [{
     provide: NZ_ICONS,

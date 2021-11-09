@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hotkey, HotkeysService } from 'angular2-hotkeys';
+import { NewChatService } from '../shared/components/new-chat/new-chat.service';
+import { NewMessageService } from '../shared/components/new-message/new-message.service';
 
 @Component({
   selector: 'ql-dashboard',
@@ -9,7 +11,8 @@ import { Hotkey, HotkeysService } from 'angular2-hotkeys';
 })
 export class DashboardComponent implements OnInit {
   selectedModule: string = 'overview';
-  constructor(private readonly router: Router, private readonly hotkeysService: HotkeysService) {
+  constructor(private readonly router: Router, private readonly hotkeysService: HotkeysService,
+    private readonly newChatService: NewChatService, private readonly newMessageService: NewMessageService) {
     this.addKeyboadShortCut('fn+c', 'connect', 'Open Connect');
     this.addKeyboadShortCut('fn+h', 'hr/analytics', 'Open HR Management');
     this.addKeyboadShortCut('fn+r', 'resources', 'Open Employee Management');
@@ -19,7 +22,25 @@ export class DashboardComponent implements OnInit {
     this.addKeyboadShortCut('fn+i', 'accounts', 'Open Accounts & Payroll');
     this.addKeyboadShortCut('fn+e', 'entities', 'Open Project Management');
     this.addKeyboadShortCut('fn+q', 'services', 'Open Service Management');
+    this.addKeyboadShortCutToNewChat();
+    this.addKeyboadShortCutToNewMessage();
   }
+
+
+  addKeyboadShortCutToNewChat() {
+    this.hotkeysService.add(new Hotkey('alt+shift+c', (event: KeyboardEvent): boolean => {
+      this.newChatService.openNewChat();
+      return false;
+    }, undefined, 'Open New Conversation'));
+  }
+
+  addKeyboadShortCutToNewMessage() {
+    this.hotkeysService.add(new Hotkey('alt+shift+m', (event: KeyboardEvent): boolean => {
+      this.newMessageService.openNewMessage();
+      return false;
+    }, undefined, 'Compose Mail'));
+  }
+
 
   addKeyboadShortCut(key: string, module: string, description?: string | ''): void {
     this.hotkeysService.add(new Hotkey(key, (event: KeyboardEvent): boolean => {

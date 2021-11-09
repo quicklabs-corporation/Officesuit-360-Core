@@ -1,3 +1,54 @@
-<button nz-button nzType="primary">
-    Compose mail
-</button>
+<nz-drawer [nzBodyStyle]="{ overflow: 'auto' }" [nzMaskClosable]="false" [nzWidth]="720" [nzVisible]="visible"
+    [nzTitle]="headerMessageTpl" [nzFooter]="footerMessageTpl" (nzOnClose)="close()">
+    <div *nzDrawerContent>
+        <section #messageBody>
+            <div class="px-20 py-10 bb">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col class="gutter-row" [nzSpan]="2">
+                        <p class="my-7 caption2">From:</p>
+                    </div>
+                    <div nz-col class="gutter-row" [nzSpan]="18">
+                        <nz-select class="d-block" nzMode="tags" nzPlaceHolder="" [(ngModel)]="listOfSelectedValue">
+                            <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label"
+                                [nzValue]="option.value">
+                            </nz-option>
+                        </nz-select>
+                    </div>
+                    <div nz-col class="gutter-row my-5" [nzSpan]="4">
+                        <button nz-button [nzSize]="'small'" class="mr-8">CC</button>
+                        <button nz-button [nzSize]="'small'">BCC</button>
+                    </div>
+                </div>
+            </div>
+            <div class="px-20 py-10 bb">
+                <div nz-row [nzGutter]="16">
+                    <div nz-col class="gutter-row" [nzSpan]="2">
+                        <p class="my-7 caption2">To:</p>
+                    </div>
+                    <div nz-col class="gutter-row" [nzSpan]="22">
+                        <nz-select class="d-block" nzMode="tags" nzPlaceHolder="" [(ngModel)]="listOfSelectedValue">
+                            <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label"
+                                [nzValue]="option.value">
+                            </nz-option>
+                        </nz-select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ql-editor></ql-editor>
+            </div>
+        </section>
+    </div>
+    <ng-template #headerMessageTpl>
+        <p class="mb-0 subhead">
+            Compose Mail
+        </p>
+    </ng-template>
+
+    <ng-template #footerMessageTpl>
+        <div style="float: right">
+            <button nz-button style="margin-right: 8px;" (click)="close()">Discard</button>
+            <button nz-button nzType="primary" (click)="close()">Send Message</button>
+        </div>
+    </ng-template>
+</nz-drawer>
