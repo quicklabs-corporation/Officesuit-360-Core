@@ -2,38 +2,58 @@
     <div class="profile">
         <div class="profile-info px-15 py-10">
             <div nz-row>
-                <div nz-col nzSpan="2">
+                <div nz-col nzSpan="2" class="text-center">
                     <nz-avatar [nzShape]="'square'" [nzSize]="60" [nzIcon]="'user'"></nz-avatar>
                 </div>
                 <div nz-col nzSpan="22">
-                    <div>
-                        <div nz-row>
-                            <div nz-col nzSpan="24" class="mb-10">
-                                <span class="subhead  mr-10">Surya Kavutarapu</span>
-                                <nz-tag [nzColor]="'#87d068'">Active</nz-tag>
+                    <div nz-row>
+                        <div nz-col nzSpan="10" class="br">
+                            <p class="mb-0">
+                                <span class="subhead mb-0"> Surya Kavutarapu</span>
+                                <nz-divider nzType="vertical"></nz-divider>
+                                <nz-select class="status-select" [nzCustomTemplate]="defaultTemplate"
+                                    [(ngModel)]="status" [nzSize]="'small'">
+                                    <nz-option nzCustomContent nzLabel="Available" nzValue="available">
+                                        <i nz-icon [nzType]="'check-circle'" class="mr-8" [nzTheme]="'fill'"
+                                            style="color: '#52c41a'"></i>
+                                        Available
+                                    </nz-option>
+                                    <ng-template #defaultTemplate let-selected>
+                                        <i nz-icon [nzType]="'check-circle'" class="mr-4" [nzTheme]="'fill'"
+                                            style="color: '#52c41a'"></i>
+                                        {{ selected.nzLabel }} <i nz-icon nzType="caret-down"
+                                            class="fs-10 ml-4 text-muted" nzTheme="outline"></i>
+                                    </ng-template>
+                                </nz-select>
+                            </p>
+                            <div nz-row>
+                                <div nz-col nzSpan="24">
+                                    <span class="cursor caption2 fs-12 text-muted">CEO & Founder</span>
+                                    <nz-divider nzType="vertical"></nz-divider>
+                                    <span class="caption2 text-muted">suryakavutarapu@quicklabs.com</span>
+                                </div>
                             </div>
-                            <div nz-col nzSpan="6">
-                                <span class="text-muted caption2">
-                                    <i nz-icon nzType="carry-out" nzTheme="outline" class="mr-8"></i>
-                                    {{date | date: 'MMM d, y, h:mm:ss a'}}
-                                </span>
+                            <p class="mb-0">
+                                <span class="fs-12 text-muted">Chill Mama 👌</span> <span
+                                    class="fs-12 ml-8 caption1 cursor">Change Status</span>
+                            </p>
+                        </div>
+                        <div nz-col nzSpan="6" class="px-20 py-5 br">
+                            <p class="caption2 text-muted mb-10">Reports to</p>
+                            <div>
+                                <nz-badge nzDot>
+                                    <nz-avatar nzSize="small" nzText="S" [nzShape]="'square'">
+                                    </nz-avatar>
+                                </nz-badge>
+                                <span class="ml-5 caption1 mr-8">Surya Kavutarapu</span>
                             </div>
-                            <div nz-col nzSpan="6">
-                                <span class="text-muted caption2">
-                                    <i nz-icon nzType="environment" nzTheme="outline" class="mr-8"></i> Hyderabad,
-                                    500081.
-                                </span>
-                            </div>
-                            <div nz-col nzSpan="6" class="text-center">
-                                <span class="text-muted caption2">
-                                    <i nz-icon nzType="mail" nzTheme="outline" class="mr-8"></i>
-                                    suryakavutarapu@scriptbees.com
-                                </span>
-                            </div>
-                            <div nz-col nzSpan="6" class="text-center">
-                                <span class="text-muted caption2">
-                                    <i nz-icon nzType="mobile" nzTheme="outline" class="mr-8"></i> +91 9542437709
-                                </span>
+                        </div>
+                        <div nz-col nzSpan="8" class="px-20 py-5">
+                            <p class="caption2 text-muted mb-10">Web Check In</p>
+                            <div>
+                                <nz-switch nzSize="small" [(ngModel)]="webcheckin" class="mr-8">
+                                </nz-switch> <span class="caption2 fs-12 text-muted">{{webcheckin ? 'Logged in' :
+                                    'Logged out'}} </span>
                             </div>
                         </div>
                     </div>
@@ -43,8 +63,8 @@
         <div class="profile-tabs pl-20">
             <nz-tabset nzLinkRouter [nzSize]="'small'">
                 <nz-tab>
-                    <a *nzTabLink nz-tab-link [routerLink]="['./overview']"
-                        [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+                    <a *nzTabLink nz-tab-link [routerLink]="['./overview']" [queryParams]="{ tab: 'four' }"
+                        queryParamsHandling="merge">
                         Overview
                     </a>
                 </nz-tab>

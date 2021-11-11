@@ -70,6 +70,7 @@ import { HotkeyModule } from 'angular2-hotkeys';
 import { NewChatComponent } from './components/new-chat/new-chat.component';
 import { NewMessageComponent } from './components/new-message/new-message.component';
 import { NzMentionModule } from 'ng-zorro-antd/mention';
+import { ChartsModule } from 'ng2-charts';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
