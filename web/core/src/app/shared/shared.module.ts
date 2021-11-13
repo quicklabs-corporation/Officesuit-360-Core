@@ -18,7 +18,6 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
@@ -63,7 +62,6 @@ import { InfoAlertComponent } from './components/info-alert/info-alert.component
 import { CustomIconComponent } from './components/custom-icon/custom-icon.component';
 import { EditorComponent } from './components/editor/editor.component';
 import { QuillModule } from 'ngx-quill';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { DocumentComponent } from './components/document/document.component';
 import { HotkeyModule } from 'angular2-hotkeys';
@@ -71,6 +69,7 @@ import { NewChatComponent } from './components/new-chat/new-chat.component';
 import { NewMessageComponent } from './components/new-message/new-message.component';
 import { NzMentionModule } from 'ng-zorro-antd/mention';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -94,7 +93,6 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
   imports: [
     NzSelectModule,
     QuillModule.forRoot(),
-    CKEditorModule,
     NzDrawerModule,
     CommonModule,
     NzAlertModule,

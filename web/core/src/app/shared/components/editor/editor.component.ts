@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import 'quill-emoji/dist/quill-emoji.js';
+import { Component, OnInit } from '@angular/core';;
 
 @Component({
   selector: 'ql-editor',
@@ -8,12 +7,8 @@ import 'quill-emoji/dist/quill-emoji.js';
 })
 export class EditorComponent implements OnInit {
   quillConfiguration = {
-    'emoji-shortname': true,
-    'emoji-textarea': false,
-    'emoji-toolbar': true,
     toolbar: {
-      container: [['bold', 'italic', 'underline', 'strike','blockquote', 'code-block','emoji']],
-      handlers: { 'emoji': function () { } }
+      container: [['bold', 'italic', 'underline', 'strike','blockquote', 'code-block',]],
     },
   }
   constructor() { }
