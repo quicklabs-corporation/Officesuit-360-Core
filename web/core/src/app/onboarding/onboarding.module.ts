@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OnboardingRoutingModule } from './onboarding-routing.module';
 import { OnboardingComponent } from './onboarding.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { OnboardingComponent } from './onboarding.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     OnboardingRoutingModule
   ]
 })

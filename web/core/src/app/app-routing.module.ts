@@ -7,6 +7,9 @@ const routes: Routes = [{
 }, {
   path: 'flow',
   loadChildren: () => import('./flow-tool/flow-tool.module').then(m => m.FlowToolModule)
+},{
+  path: 'onboarding',
+  loadChildren: () => import('./onboarding/onboarding.module').then(m => m.OnboardingModule)
 }];
 
 @NgModule({
