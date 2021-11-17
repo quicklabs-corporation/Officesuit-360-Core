@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Hotkey, HotkeysService } from 'angular2-hotkeys';
 import { NewChatService } from 'src/app/shared/components/new-chat/new-chat.service';
 import { NewMessageService } from 'src/app/shared/components/new-message/new-message.service';
 
@@ -10,13 +11,28 @@ import { NewMessageService } from 'src/app/shared/components/new-message/new-mes
 })
 export class ConnectComponent implements OnInit {
   type: string = 'conversations';
-
   constructor(private readonly router: Router,
     private readonly newChatService: NewChatService,
-    private readonly newMessageService: NewMessageService) { }
+    private readonly newMessageService: NewMessageService, private readonly hotkeysService: HotkeysService) { }
 
   ngOnInit(): void {
     this.redirect();
+    this.addKeyboadShortCutToNewChat();
+    this.addKeyboadShortCutToNewMessage();
+  }
+
+  addKeyboadShortCutToNewChat() {
+    this.hotkeysService.add(new Hotkey('alt+shift+c', (event: KeyboardEvent): boolean => {
+      this.newChatService.openNewChat();
+      return false;
+    }, undefined, 'Open New Conversation'));
+  }
+
+  addKeyboadShortCutToNewMessage() {
+    this.hotkeysService.add(new Hotkey('alt+shift+m', (event: KeyboardEvent): boolean => {
+      this.newMessageService.openNewMessage();
+      return false;
+    }, undefined, 'Compose Mail'));
   }
 
   createConversation() {

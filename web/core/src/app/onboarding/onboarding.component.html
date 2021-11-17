@@ -23,9 +23,6 @@
           nzDescription="Choose the modules that help your organization."></nz-step>
         <nz-step (click)="currentItem(2)" class="cursor" nzTitle="Pricing and Plans"
           nzDescription="Get Tailor made estimates based on your requirements"></nz-step>
-        <nz-step (click)="currentItem(3)" class="cursor" nzTitle="Brand & Identity"
-          nzDescription="Make it appear as application had made it for you."></nz-step>
-        <nz-step nzTitle="Let Set Go"></nz-step>
       </nz-steps>
     </div>
     <div nz-col [nzSpan]="17" nzOffset="1">
@@ -423,25 +420,7 @@
           <div class="mt-20 text-center">
             <button nz-button nzType="default" class="mr-8" (click)="currentItem(1)">Back</button>
             <button nz-button nzType="default" class="mr-8">Send Estimate over Email</button>
-            <button nz-button nzType="primary" (click)="currentItem(3)">Activate Free 30 Day Trail</button>
-          </div>
-        </section>
-        <section *ngIf="currentStep === 3" class="bg-white border p-20">
-          Brand Logo Uploads comes here.
-
-          <div class="mt-20 text-center">
-            <button nz-button nzType="default" class="mr-8" (click)="currentItem(2)">Back</button>
-            <button nz-button nzType="primary" (click)="currentItem(4)">Skip & Continue</button>
-          </div>
-        </section>
-        <section *ngIf="currentStep === 4" class="bg-white border p-20">
-          <div class="px-80">
-            <nz-result nzStatus="success" nzTitle="Horray! Onboarding Successfully."
-              nzSubTitle="Your Trail got activated for 30 Day period.">
-              <div nz-result-extra>
-                <button nz-button nzType="primary">Go to Console</button>
-              </div>
-            </nz-result>
+            <button nz-button nzType="primary" (click)="goToConsole()">Activate Free 30 Day Trail</button>
           </div>
         </section>
       </div>
