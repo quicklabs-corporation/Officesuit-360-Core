@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./onboarding.component.less']
 })
 export class OnboardingComponent implements OnInit {
-  currentStep: number = 1;
+  currentStep: number = 2;
   modules: any;
   organizationDetailsForm!: FormGroup;
   constructor(private fb: FormBuilder) {
@@ -21,7 +21,7 @@ export class OnboardingComponent implements OnInit {
       sales: false,
       admin: false,
       pm: false
-    }  
+    }
   }
 
   ngOnInit(): void {

@@ -120,71 +120,146 @@
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
-                <i nz-icon nzType="comment" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
-                  Connect
+                <i nz-icon nzType="mail" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Mailbox
                 </span>
-                <label class="module-select" nz-checkbox [nzDisabled]="true" [(ngModel)]="modules.connect"></label>
+                <label class="module-select" nz-checkbox [nzDisabled]="true" [(ngModel)]="modules.mailbox"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
-                <i nz-icon nzType="solution" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
-                  class="footnote">
-                  HR Management
+                <i nz-icon nzType="comment" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Conversations
                 </span>
-                <label class="module-select" nz-checkbox [(ngModel)]="modules.hr"></label>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.conversations"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
                 <i nz-icon nzType="calculator" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
                   class="footnote">
-                  Billing & Accounts
+                  Payroll Management
                 </span>
                 <label class="module-select" nz-checkbox [(ngModel)]="modules.accounting"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
-                <i nz-icon nzType="fund-view" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
-                  Marketing Tools
+                <i nz-icon nzType="audit" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Invoices & Accounting
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.accounting"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="fund-view" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
+                  class="footnote">
+                  Hiring & Onboarding
                 </span>
                 <label class="module-select" nz-checkbox [(ngModel)]="modules.marketing"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
-                <i nz-icon nzType="hourglass" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
-                  Sales
+                <i nz-icon nzType="hourglass" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
+                  class="footnote">
+                  Timesheets & Performance
                 </span>
                 <label class="module-select" nz-checkbox [(ngModel)]="modules.sales"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
-                <i nz-icon nzType="customer-service" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
-                  Customer Relationship
+                <i nz-icon nzType="customer-service" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
+                  class="footnote">
+                  Support Desk
                 </span>
-                <label class="module-select" nz-checkbox
-                  [(ngModel)]="modules.crm"></label>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.crm"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
-                <i nz-icon nzType="tool" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
-                  Adminstration
+                <i nz-icon nzType="phone" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Contact Center
                 </span>
                 <label class="module-select" nz-checkbox [(ngModel)]="modules.admin"></label>
               </section>
             </div>
             <div nz-col [nzSpan]="12">
-                <section class="module-item mt-10 p-20 bg-white border br-5">
-                  <i nz-icon nzType="fork" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
-                    Project Management
-                  </span>
-                  <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
-                </section>
-              </div>
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="heart" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Customer Success
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.admin"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="robot" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Messaging Bots
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="fund-projection-screen" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
+                  class="footnote">
+                  Sales CRM
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="notification" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span
+                  class="footnote">
+                  Marketing Tools
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="shop" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Website Builder
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="group" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Internal Service Management
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="ungroup" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Internal Operations
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="fork" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Project Management
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
+            <div nz-col [nzSpan]="12">
+              <section class="module-item mt-10 p-20 bg-white border br-5">
+                <i nz-icon nzType="desktop" class="fs-24 text-muted mr-8" nzTheme="outline"></i> <span class="footnote">
+                  Asset Management
+                </span>
+                <label class="module-select" nz-checkbox [(ngModel)]="modules.pm"></label>
+              </section>
+            </div>
           </div>
           <div class="mt-20 text-center">
             <button nz-button nzType="default" class="mr-8" (click)="currentItem(1)">Back</button>
@@ -192,13 +267,182 @@
           </div>
         </section>
         <section *ngIf="currentStep === 2" class="bg-white border p-20">
-          last
+          <div class="text-center">
+            <p class="subhead mb-30 fs-18">
+              Estimation & Billing.
+            </p>
+          </div>
+          <div>
+            <ul nz-list nzBordered nzSize="small">
+              <nz-list-header nz-row>
+                <div nz-col [nzSpan]="12">
+                  <p class="subhead mb-0">
+                    QuickLabs Corporation Pvt LTD
+                  </p>
+                  <span class="footnote text-muted">
+                    Estimation Date:
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-right">
+                  <span class="footnote text-muted">
+
+                  </span>
+                </div>
+              </nz-list-header>
+              <li nz-list-item>
+                <span class="text-uppercase caption2">One Time Subscription</span>
+              </li>
+              <li nz-list-item>
+                <div nz-col [nzSpan]="12">
+                  <p class="footnote mb-0">
+                    Basic Features
+                  </p>
+                  <span class="caption2 text-muted">
+                    Self Service Portal, Mailbox, Conversations
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-right">
+                  <span class="footnote">
+                    INR 3000/-
+                  </span>
+                </div>
+              </li>
+              <li nz-list-item>
+                <div nz-col [nzSpan]="12">
+                  <p class="footnote mb-0">
+                    HR Module
+                  </p>
+                  <span class="caption2 text-muted">
+                    Hiring & Onboarding, Core HR, Payroll Management
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                  <span class="footnote text-muted">
+                    3 x 3000
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                  <span class="footnote">
+                    INR 9000/-
+                  </span>
+                </div>
+              </li>
+              <li nz-list-item class="text-right">
+                <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+                  <span class="footnote text-muted">
+                    Total
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                  <span class="footnote">
+                    INR 12000/-
+                  </span>
+                </div>
+              </li>
+              <li nz-list-item>
+                <span class="text-uppercase caption2">Recurring Subscriptions</span>
+              </li>
+              <li nz-list-item>
+                <div nz-col [nzSpan]="12">
+                  <p class="footnote mb-0">
+                    User Subscription
+                  </p>
+                  <span class="caption2 text-muted">
+                    First 20 users.
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-right">
+                  <span class="footnote">
+                    INR 0/-
+                  </span>
+                </div>
+              </li>
+              <li nz-list-item>
+                <div nz-col [nzSpan]="12">
+                  <p class="footnote mb-0">
+                    Storage Space
+                  </p>
+                  <span class="caption2 text-muted">
+                    Upto 5GB
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="12" class="text-right">
+                  <span class="footnote">
+                    INR 0/-
+                  </span>
+                </div>
+              </li>
+              <li nz-list-item>
+                <div nz-col [nzSpan]="12">
+                  <p class="footnote mb-0">
+                    Incremental Users
+                  </p>
+                  <span class="caption2 text-muted">
+                    As per your team size estimated amount
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                  <span class="footnote text-muted">
+                    80 x 400
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                  <span class="footnote">
+                    INR 32000/-
+                  </span>
+                </div>
+              </li>
+              <li nz-list-item class="text-right">
+                <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+                  <span class="footnote text-muted">
+                    Total
+                  </span>
+                </div>
+                <div nz-col [nzSpan]="6" class="text-right">
+                  <span class="footnote">
+                    INR 32000/-
+                  </span>
+                </div>
+              </li>
+              <nz-list-footer class="text-right">
+                <div nz-row class="pt-30">
+                  <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+                    <span class="footnote text-muted">
+                      Grand Total
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="6" class="text-right">
+                    <strong class="caption2 fs-14">
+                      INR 44000/-
+                    </strong>
+                  </div>
+                </div>
+              </nz-list-footer>
+            </ul>
+          </div>
+          <div class="mt-20 text-center">
+            <button nz-button nzType="default" class="mr-8" (click)="currentItem(1)">Back</button>
+            <button nz-button nzType="default" class="mr-8">Send Estimate over Email</button>
+            <button nz-button nzType="primary" (click)="currentItem(3)">Activate Free 30 Day Trail</button>
+          </div>
         </section>
         <section *ngIf="currentStep === 3" class="bg-white border p-20">
-          Third
+          Brand Logo Uploads comes here.
+
+          <div class="mt-20 text-center">
+            <button nz-button nzType="default" class="mr-8" (click)="currentItem(2)">Back</button>
+            <button nz-button nzType="primary" (click)="currentItem(4)">Skip & Continue</button>
+          </div>
         </section>
         <section *ngIf="currentStep === 4" class="bg-white border p-20">
-          Finished
+          <div class="px-80">
+            <nz-result nzStatus="success" nzTitle="Horray! Onboarding Successfully."
+              nzSubTitle="Your Trail got activated for 30 Day period.">
+              <div nz-result-extra>
+                <button nz-button nzType="primary">Go to Console</button>
+              </div>
+            </nz-result>
+          </div>
         </section>
       </div>
     </div>
