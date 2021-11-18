@@ -9,12 +9,6 @@ const routes: Routes = [{
     path: 'hr',
     loadChildren: () => import('./hr/hr.module').then(m => m.HrModule)
   }, {
-    path: 'connect',
-    loadChildren: () => import('./connect/connect.module').then(m => m.ConnectModule)
-  }, {
-    path: 'myprofile',
-    loadChildren: () => import('./myprofile/myprofile.module').then(m => m.MyprofileModule)
-  }, {
     path: 'resources',
     loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule)
   }, {

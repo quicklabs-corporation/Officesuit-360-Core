@@ -1,0 +1,46 @@
+<section class="pt-30 bg-white px-80">
+  <div nz-row [nzGutter]="16" class="mb-30">
+    <div nz-col [nzSpan]="24" class="p-30 text-center">
+      <p class="headline">
+        Welcome to OfficeSuit 360 Console
+      </p>
+      <div nz-row [nzGutter]="16" nzJustify="center">
+        <div nz-col [nzSpan]="12">
+          <nz-input-group [nzSuffix]="suffixIconSearch" nzSize="large">
+            <input type="text" [ngModel]="searchInput" (ngModelChange)="search($event)" nz-input
+              placeholder="Search by module name" />
+          </nz-input-group>
+          <ng-template #suffixIconSearch>
+            <i nz-icon nzType="search"></i>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="24" *ngIf="filterModules.length > 0; else showModuleEmptyState">
+    <div nz-col [nzSpan]="6" class="mb-24 module-card" *ngFor="let module of filterModules">
+      <div class="bg-white border br-5 p-15 text-center" (click)="navigateTo(module?.path)">
+        <p>
+          <i nz-icon [nzType]="module?.icon" class="fs-30" [ngClass]="module?.icon" nzTheme="outline"></i>
+        </p>
+        <p class="subhead mb-5">
+          {{module?.name}}
+        </p>
+        <p class="caption2 text-muted">
+          {{module?.desc}}
+        </p>
+        <p class="mb-0">
+          <ql-shortcut [shortcut]="module?.shortcut"></ql-shortcut>
+        </p>
+      </div>
+    </div>
+  </div>
+  <ng-template #showModuleEmptyState>
+    <nz-empty nzNotFoundImage="/assets/icons/no-requests.png" [nzNotFoundContent]="contentTpl"></nz-empty>
+    <ng-template #contentTpl>
+      <span>
+        No module found with keyword : {{searchInput}}
+      </span>
+    </ng-template>
+  </ng-template>
+</section>

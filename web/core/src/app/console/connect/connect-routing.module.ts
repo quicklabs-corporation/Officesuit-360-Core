@@ -6,6 +6,7 @@ const routes: Routes = [{
   path: '',
   component: ConnectComponent,
   children: [
+    { path: '', redirectTo: 'conversations', pathMatch: 'full' },
     {
       path: 'conversations',
       loadChildren: () => import('./conversations/conversations.module').then(m => m.ConversationsModule)

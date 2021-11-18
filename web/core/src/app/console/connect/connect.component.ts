@@ -16,7 +16,6 @@ export class ConnectComponent implements OnInit {
     private readonly newMessageService: NewMessageService, private readonly hotkeysService: HotkeysService) { }
 
   ngOnInit(): void {
-    this.redirect();
     this.addKeyboadShortCutToNewChat();
     this.addKeyboadShortCutToNewMessage();
   }
@@ -49,6 +48,6 @@ export class ConnectComponent implements OnInit {
   }
 
   redirect(): void {
-    this.router.navigate([`/dashboard/connect/${this.type}`]);
+    this.router.navigate([`/console/connect/${this.type}`]);
   }
 }

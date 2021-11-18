@@ -14,7 +14,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 const routes: Routes = [{
   path: '',
   component: MyprofileComponent,
-  children: [{
+  children: [{ path: '', redirectTo: 'overview', pathMatch: 'full' }, {
     path: 'ctc',
     component: CtcComponent
   }, {

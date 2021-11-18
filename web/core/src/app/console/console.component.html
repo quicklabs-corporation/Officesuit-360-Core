@@ -1,61 +1,55 @@
-<nav class="bg-white py-10 px-80 bb">
-  <div nz-row [nzGutter]="16" nzAlign="middle">
-    <div nz-col [nzSpan]="12">
-      <nz-avatar [nzSize]="38" [nzShape]="'square'" nzIcon="user"></nz-avatar>
-      <span class="subhead ml-8 mb-0">
-        QuickLabs Corporation Pvt Ltd.
-      </span>
-    </div>
-    <div nz-col class="text-right" [nzSpan]="12">
-      <a nz-button nzType="link" class="mr-8"><i nz-icon nzType="question-circle" nzTheme="outline"></i> FAQ's</a>
-      <a nz-button nzType="link" class="mr-8"><i nz-icon nzType="info-circle" nzTheme="outline"></i> User Guide</a>
-      <button nz-button nzType="primary">Signout</button>
-    </div>
-  </div>
-</nav>
-<section class="pt-30 bg-white px-80">
-  <div nz-row [nzGutter]="16" class="mb-30">
-    <div nz-col [nzSpan]="24" class="p-30 text-center">
-      <p class="headline">
-        Welcome to OfficeSuit 360 Console
-      </p>
-      <div nz-row [nzGutter]="16" nzJustify="center">
-        <div nz-col [nzSpan]="12">
-          <nz-input-group [nzSuffix]="suffixIconSearch" nzSize="large">
-            <input type="text" [ngModel]="searchInput" (ngModelChange)="search($event)" nz-input
-              placeholder="Search by module name" />
-          </nz-input-group>
-          <ng-template #suffixIconSearch>
-            <i nz-icon nzType="search"></i>
-          </ng-template>
-        </div>
+<main class="console-wrapper">
+  <aside class="sidebar">
+      <div class="wrap">
+          <div class="logo">
+              <img src="/assets/sample-logo.png" alt="Sample logo">
+          </div>
       </div>
-    </div>
-  </div>
-  <div nz-row [nzGutter]="24" *ngIf="filterModules.length > 0; else showModuleEmptyState">
-    <div nz-col [nzSpan]="6" class="mb-24 module-card" *ngFor="let module of filterModules">
-      <div class="bg-white border br-5 p-15 text-center" (click)="navigateTo(module?.path)">
-        <p>
-          <i nz-icon [nzType]="module?.icon" class="fs-30" [ngClass]="module?.icon" nzTheme="outline"></i>
-        </p>
-        <p class="subhead mb-5">
-          {{module?.name}}
-        </p>
-        <p class="caption2 text-muted">
-          {{module?.desc}}
-        </p>
-        <p class="mb-0">
-          <ql-shortcut [shortcut]="module?.shortcut"></ql-shortcut>
-        </p>
+      <div class="wrap multiple">
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'myprofile'}" nzTooltipTitle="Self Service Portal"
+              nzTooltipPlacement="right" nz-tooltip (click)="navigateTo('myprofile')">
+              <i nz-icon nzType="user" nzTheme="outline"></i>
+          </div>
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'connect'}" nzTooltipTitle="Connect"
+              nzTooltipPlacement="right" nz-tooltip (click)="navigateTo('connect')">
+              <i nz-icon nzType="comment" nzTheme="outline"></i>
+          </div>
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'apps'}"
+              nzTooltipTitle="My Apps" nzTooltipPlacement="right" nz-tooltip
+              (click)="navigateTo('apps')">
+              <i nz-icon nzType="appstore" nzTheme="outline"></i>
+          </div>
       </div>
-    </div>
-  </div>
-  <ng-template #showModuleEmptyState>
-    <nz-empty nzNotFoundImage="/assets/icons/no-requests.png" [nzNotFoundContent]="contentTpl"></nz-empty>
-    <ng-template #contentTpl>
-      <span>
-        No module found with keyword : {{searchInput}}
-      </span>
-    </ng-template>
-  </ng-template>
-</section>
+      <!-- <div class="wrap multiple">
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'hr/analytics'}"
+              nzTooltipTitle="HR Management" nzTooltipPlacement="right" nz-tooltip
+              (click)="navigateTo('hr/analytics')">
+              <i nz-icon nzType="solution" nzTheme="outline"></i>
+          </div>
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'resources'}"
+              nzTooltipTitle="Resources Management" nzTooltipPlacement="right" nz-tooltip
+              (click)="navigateTo('resources')">
+              <i nz-icon nzType="team" nzTheme="outline"></i>
+          </div>
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'admin'}" nzTooltipTitle="Admin Portal"
+              nzTooltipPlacement="right" nz-tooltip (click)="navigateTo('admin')">
+              <i nz-icon nzType="setting" nzTheme="outline"></i>
+          </div>
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'accounts'}" nzTooltipTitle="Accounts"
+              nzTooltipPlacement="right" nz-tooltip (click)="navigateTo('accounts')">
+              <i nz-icon nzType="audit" nzTheme="outline"></i>
+          </div>
+      </div> -->
+      <!-- <div class="wrap">
+          <div class="side-card" [ngClass]="{'active': selectedModule === 'services'}"
+              nzTooltipTitle="Services Management" nzTooltipPlacement="right" nz-tooltip
+              (click)="navigateTo('services')">
+              <i nz-icon nzType="build" nzTheme="outline"></i>
+          </div>
+      </div> -->
+  </aside>
+  <router-outlet></router-outlet>
+</main>
+
+<ql-new-message></ql-new-message>
+<ql-new-chat></ql-new-chat>
