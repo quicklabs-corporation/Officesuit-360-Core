@@ -1,49 +1,53 @@
-<div class="hr-wrapper">
-    <div class="nav">
-        <nz-tabset nzLinkRouter [nzSize]="'small'" [nzLinkRouter]="true" [nzLinkExact]="false">
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./analytics']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Analytics
-                </a>
-            </nz-tab>
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./hiring']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Hiring
-                </a>
-            </nz-tab>
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./attandance']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Leaves & Attandance Management
-                </a>
-            </nz-tab>
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./legaldocuments']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Legal documents
-                </a>
-            </nz-tab>
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./onboarding']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Onboarding & Exits
-                </a>
-            </nz-tab>
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./organization']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Organization Structure
-                </a>
-            </nz-tab>
-            <nz-tab>
-                <a *nzTabLink nz-tab-link [routerLink]="['./configurations']" [queryParams]="{ tab: 'four' }"
-                    queryParamsHandling="merge">
-                    Configurations
-                </a>
-            </nz-tab>
-        </nz-tabset>
+<div class="common-template">
+  <aside class="sidebar">
+    <div class="p-10 bb heading">
+      <div class="logo">
+        <img src="/assets/sample-logo.png" alt="Sample logo">
+      </div>
+      <p class="subhead mb-0 title">
+        HR Management
+      </p>
     </div>
+    <ul nz-menu [nzMode]="'vertical'">
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./analytics']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Analytics
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./hiring']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Hiring
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./attandance']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Leaves & Attandance Management
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./legaldocuments']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Legal documents
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./onboarding']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Onboarding & Exits
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./organization']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Organization Structure
+        </a>
+
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['./configurations']" [queryParams]="{ tab: 'four' }" queryParamsHandling="merge">
+          Configurations
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <main class="main-section">
     <router-outlet></router-outlet>
+  </main>
 </div>
