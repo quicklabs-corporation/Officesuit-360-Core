@@ -132,7 +132,6 @@ export class FlowToolComponent implements OnInit, AfterViewChecked {
     } else {
       this.flowData[this.flowData.findIndex(each => each.id === this.currentItem.id)] = this.currentItem;
     }
-
     this.close();
   }
 
