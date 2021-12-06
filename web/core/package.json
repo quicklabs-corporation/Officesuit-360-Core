@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --prod --build-optimizer",
-    "start": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng serve",
+    "start": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng serve --port 4201",
     "dev-build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --prod --build-optimizer --configuration=dev",
     "test": "ng test",
     "lint": "ng lint",

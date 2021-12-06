@@ -7,7 +7,8 @@ const routes: Routes = [{
   path: '',
   component: ConsoleComponent,
   children: [
-    { path: '', redirectTo: 'apps', pathMatch: 'full' }, {
+    { path: '', redirectTo: 'apps', pathMatch: 'full' }, 
+    {
       path: 'connect',
       loadChildren: () => import('./connect/connect.module').then(m => m.ConnectModule)
     }, {
