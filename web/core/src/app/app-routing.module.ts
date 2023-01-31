@@ -14,7 +14,12 @@ const routes: Routes = [
   }, {
     path: 'console',
     loadChildren: () => import('./console/console.module').then(m => m.ConsoleModule)
-  }];
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
