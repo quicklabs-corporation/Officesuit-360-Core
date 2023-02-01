@@ -61,14 +61,13 @@ import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { InfoAlertComponent } from './components/info-alert/info-alert.component';
 import { CustomIconComponent } from './components/custom-icon/custom-icon.component';
 import { EditorComponent } from './components/editor/editor.component';
-import { QuillModule } from 'ngx-quill';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { DocumentComponent } from './components/document/document.component';
 import { HotkeyModule } from 'angular2-hotkeys';
 import { NewChatComponent } from './components/new-chat/new-chat.component';
 import { NewMessageComponent } from './components/new-message/new-message.component';
 import { NzMentionModule } from 'ng-zorro-antd/mention';
-import { ChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShortcutComponent } from './components/shortcut/shortcut.component';
 
@@ -94,7 +93,6 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
   ],
   imports: [
     NzSelectModule,
-    QuillModule.forRoot(),
     NzDrawerModule,
     CommonModule,
     NzAlertModule,

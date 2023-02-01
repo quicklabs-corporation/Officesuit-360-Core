@@ -104,7 +104,7 @@ export class FlowToolComponent implements OnInit, AfterViewChecked {
   removeChildsAndSubsequentItems(item: any): void {
     if (item.childs.length > 0) {
       item.childs.forEach((element: IFlowItem) => {
-        const childElement = this.flowData.filter(each => each.id === element.childId)[0];
+        const childElement = this.flowData.filter(each => each.id === element['childId'])[0];
         if (childElement.childs.length > 0) {
           this.removeChildsAndSubsequentItems(childElement);
         } else {
@@ -126,7 +126,7 @@ export class FlowToolComponent implements OnInit, AfterViewChecked {
   //  Below methods will be used to render data to canvas
   renderToCanvas(): void {
     this.currentItem.visible = true;
-    delete this.currentItem.parentIndex;
+    delete this.currentItem['parentIndex'];
     if (this.flowData.filter(each => each.id === this.currentItem.id).length === 0) {
       this.flowData.push(this.currentItem);
     } else {

@@ -11,7 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { environment } from 'src/environments/environment';
 
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
