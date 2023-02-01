@@ -23,7 +23,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: NPM Install Angular
-        run: npm install -g @angular/cli@11.2.8 > /dev/null
+        run: npm install -g @angular/cli@15 > /dev/null
       - name: NPM Install
         run: npm install
       - name: NPM build Angular Production
