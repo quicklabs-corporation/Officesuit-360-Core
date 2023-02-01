@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --prod --build-optimizer",
+    "build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --build-optimizer",
     "start": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng serve",
-    "dev-build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --prod --build-optimizer --configuration=dev",
+    "dev-build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --build-optimizer --configuration=dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
