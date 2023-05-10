@@ -8,6 +8,11 @@ const routes: Routes = [{
 {
   path: 'signup',
   loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule)
+},
+{
+  path: '',
+  redirectTo: 'login',
+  pathMatch: 'full'
 }];
 
 @NgModule({
