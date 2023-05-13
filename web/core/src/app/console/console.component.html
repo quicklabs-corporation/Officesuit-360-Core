@@ -1,4 +1,5 @@
 <main class="console-wrapper">
+  <nav class="main-nav"></nav>
   <aside class="sidebar">
       <div class="wrap">
           <div class="logo">
@@ -15,38 +16,18 @@
               <i nz-icon nzType="comment" nzTheme="outline"></i>
           </div>
           <div class="side-card" [ngClass]="{'active': selectedModule === 'apps'}"
-              nzTooltipTitle="My Apps" nzTooltipPlacement="right" nz-tooltip
+              nzTooltipTitle="Marketplace" nzTooltipPlacement="right" nz-tooltip
               (click)="navigateTo('apps')">
-              <i nz-icon nzType="appstore" nzTheme="outline"></i>
+              <i nz-icon nzType="shop" nzTheme="outline"></i>
           </div>
       </div>
-      <!-- <div class="wrap multiple">
-          <div class="side-card" [ngClass]="{'active': selectedModule === 'hr/analytics'}"
-              nzTooltipTitle="HR Management" nzTooltipPlacement="right" nz-tooltip
-              (click)="navigateTo('hr/analytics')">
-              <i nz-icon nzType="solution" nzTheme="outline"></i>
-          </div>
-          <div class="side-card" [ngClass]="{'active': selectedModule === 'resources'}"
-              nzTooltipTitle="Resources Management" nzTooltipPlacement="right" nz-tooltip
-              (click)="navigateTo('resources')">
-              <i nz-icon nzType="team" nzTheme="outline"></i>
-          </div>
-          <div class="side-card" [ngClass]="{'active': selectedModule === 'admin'}" nzTooltipTitle="Admin Portal"
-              nzTooltipPlacement="right" nz-tooltip (click)="navigateTo('admin')">
-              <i nz-icon nzType="setting" nzTheme="outline"></i>
-          </div>
-          <div class="side-card" [ngClass]="{'active': selectedModule === 'accounts'}" nzTooltipTitle="Accounts"
-              nzTooltipPlacement="right" nz-tooltip (click)="navigateTo('accounts')">
-              <i nz-icon nzType="audit" nzTheme="outline"></i>
-          </div>
-      </div> -->
-      <!-- <div class="wrap">
-          <div class="side-card" [ngClass]="{'active': selectedModule === 'services'}"
-              nzTooltipTitle="Services Management" nzTooltipPlacement="right" nz-tooltip
-              (click)="navigateTo('services')">
-              <i nz-icon nzType="build" nzTheme="outline"></i>
-          </div>
-      </div> -->
+      <div class="wrap multiple">
+        <div class="side-card" [ngClass]="{'active': selectedModule === 'dashboard/overview'}"
+            nzTooltipTitle="Home" nzTooltipPlacement="right" nz-tooltip
+            (click)="navigateTo('dashboard/overview')">
+            <i nz-icon nzType="appstore" nzTheme="outline"></i>
+        </div>
+    </div>
   </aside>
   <router-outlet></router-outlet>
 </main>

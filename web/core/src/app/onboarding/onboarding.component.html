@@ -17,23 +17,26 @@
   <div nz-row [nzGutter]="16">
     <div nz-col [nzSpan]="6" class="py-20">
       <nz-steps [nzCurrent]="currentStep" nzDirection="vertical" nzSize="small">
-        <nz-step (click)="currentItem(0)" class="cursor" nzTitle="Getting Started"
-          nzDescription="Help us by providing your organization details."></nz-step>
-        <nz-step (click)="currentItem(1)" class="cursor" nzTitle="Understanding Requirements"
-          nzDescription="Choose the modules that help your organization."></nz-step>
-        <nz-step (click)="currentItem(2)" class="cursor" nzTitle="Pricing and Plans"
-          nzDescription="Get Tailor made estimates based on your requirements"></nz-step>
+        <nz-step (click)="currentItem(0)" class="cursor" nzTitle="Help Us Understand Your Business"
+          nzDescription="Enlighten Us with Your Business Details"></nz-step>
+        <nz-step (click)="currentItem(1)" class="cursor" nzTitle="Gaining Insights"
+          nzDescription="Select Modules to Match Your Company's Needs."></nz-step>
+        <nz-step (click)="currentItem(2)" class="cursor" nzTitle="Finding the Perfect Fit"
+          nzDescription="Discover the Perfect Plan: Pricing that Fits Your Needs"></nz-step>
       </nz-steps>
     </div>
     <div nz-col [nzSpan]="17" nzOffset="1">
       <div class="onboarding-step-container">
-        <section *ngIf="currentStep === 0" class="bg-white border py-50">
-          <div class="text-center">
-            <p class="subhead mb-30 fs-18">
+        <section *ngIf="currentStep === 0">
+          <div class="text-center mb-50">
+            <p class="title2 mb-10">
               Organization Details
             </p>
+            <p class="subhead">
+              Please provide the following information to configure your organization.
+            </p>
           </div>
-          <div nz-row nzJustify="center">
+          <div nz-row nzJustify="center" class="bg-white border py-50">
             <div nz-col [nzSpan]="16">
               <form autocomplete="off" nz-form [formGroup]="organizationDetailsForm">
                 <nz-form-item class="mb-30">
@@ -105,6 +108,15 @@
           </div>
         </section>
         <section *ngIf="currentStep === 1" class="p-50 py-0">
+          <div class="text-center mb-50">
+            <p class="title2 mb-10">
+              Customize Your Application
+            </p>
+            <p class="subhead">
+              Tailor your software to fit your business requirements by choosing the specific modules that best align
+              with your needs. Build a personalized solution that optimizes efficiency and enhances productivity
+            </p>
+          </div>
           <div nz-row [nzGutter]="16">
             <div nz-col [nzSpan]="12">
               <section class="module-item mt-10 p-20 bg-white border br-5">
@@ -263,165 +275,171 @@
             <button nz-button nzType="primary" (click)="currentItem(2)">Continue</button>
           </div>
         </section>
-        <section *ngIf="currentStep === 2" class="bg-white border p-20">
-          <div class="text-center">
-            <p class="subhead mb-30 fs-18">
-              Estimation & Billing.
+        <section *ngIf="currentStep === 2">
+          <div class="text-center mb-50">
+            <p class="title2 mb-10">
+              Estimation & Billing Summary
+            </p>
+            <p class="subhead">
+              Streamline Your Finances with Accurate Estimates and Efficient Billing. Stay on Top of Your Financial
+              Performance.
             </p>
           </div>
-          <div>
-            <ul nz-list nzBordered nzSize="small">
-              <nz-list-header nz-row>
-                <div nz-col [nzSpan]="12">
-                  <p class="subhead mb-0">
-                    QuickLabs Corporation Pvt LTD
-                  </p>
-                  <span class="footnote text-muted">
-                    Estimation Date:
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="12" class="text-right">
-                  <span class="footnote text-muted">
-
-                  </span>
-                </div>
-              </nz-list-header>
-              <li nz-list-item>
-                <span class="text-uppercase caption2">One Time Subscription</span>
-              </li>
-              <li nz-list-item>
-                <div nz-col [nzSpan]="12">
-                  <p class="footnote mb-0">
-                    Basic Features
-                  </p>
-                  <span class="caption2 text-muted">
-                    Self Service Portal, Mailbox, Conversations
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="12" class="text-right">
-                  <span class="footnote">
-                    INR 3000/-
-                  </span>
-                </div>
-              </li>
-              <li nz-list-item>
-                <div nz-col [nzSpan]="12">
-                  <p class="footnote mb-0">
-                    HR Module
-                  </p>
-                  <span class="caption2 text-muted">
-                    Hiring & Onboarding, Core HR, Payroll Management
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="6" class="text-right">
-                  <span class="footnote text-muted">
-                    3 x 3000
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="6" class="text-right">
-                  <span class="footnote">
-                    INR 9000/-
-                  </span>
-                </div>
-              </li>
-              <li nz-list-item class="text-right">
-                <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
-                  <span class="footnote text-muted">
-                    Total
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="6" class="text-right">
-                  <span class="footnote">
-                    INR 12000/-
-                  </span>
-                </div>
-              </li>
-              <li nz-list-item>
-                <span class="text-uppercase caption2">Recurring Subscriptions</span>
-              </li>
-              <li nz-list-item>
-                <div nz-col [nzSpan]="12">
-                  <p class="footnote mb-0">
-                    User Subscription
-                  </p>
-                  <span class="caption2 text-muted">
-                    First 20 users.
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="12" class="text-right">
-                  <span class="footnote">
-                    INR 0/-
-                  </span>
-                </div>
-              </li>
-              <li nz-list-item>
-                <div nz-col [nzSpan]="12">
-                  <p class="footnote mb-0">
-                    Storage Space
-                  </p>
-                  <span class="caption2 text-muted">
-                    Upto 5GB
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="12" class="text-right">
-                  <span class="footnote">
-                    INR 0/-
-                  </span>
-                </div>
-              </li>
-              <li nz-list-item>
-                <div nz-col [nzSpan]="12">
-                  <p class="footnote mb-0">
-                    Incremental Users
-                  </p>
-                  <span class="caption2 text-muted">
-                    As per your team size estimated amount
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="6" class="text-right">
-                  <span class="footnote text-muted">
-                    80 x 400
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="6" class="text-right">
-                  <span class="footnote">
-                    INR 32000/-
-                  </span>
-                </div>
-              </li>
-              <li nz-list-item class="text-right">
-                <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
-                  <span class="footnote text-muted">
-                    Total
-                  </span>
-                </div>
-                <div nz-col [nzSpan]="6" class="text-right">
-                  <span class="footnote">
-                    INR 32000/-
-                  </span>
-                </div>
-              </li>
-              <nz-list-footer class="text-right">
-                <div nz-row class="pt-30">
-                  <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+          <section class="bg-white border p-20">
+            <div>
+              <ul nz-list nzBordered nzSize="small">
+                <nz-list-header nz-row>
+                  <div nz-col [nzSpan]="12">
+                    <p class="subhead mb-0">
+                      QuickLabs Corporation Pvt LTD
+                    </p>
                     <span class="footnote text-muted">
-                      Grand Total
+                      Estimation Date:
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="12" class="text-right">
+                    <span class="footnote text-muted">
+
+                    </span>
+                  </div>
+                </nz-list-header>
+                <li nz-list-item>
+                  <span class="text-uppercase caption2">One Time Subscription</span>
+                </li>
+                <li nz-list-item>
+                  <div nz-col [nzSpan]="12">
+                    <p class="footnote mb-0">
+                      Basic Features
+                    </p>
+                    <span class="caption2 text-muted">
+                      Self Service Portal, Mailbox, Conversations
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="12" class="text-right">
+                    <span class="footnote">
+                      INR 3000/-
+                    </span>
+                  </div>
+                </li>
+                <li nz-list-item>
+                  <div nz-col [nzSpan]="12">
+                    <p class="footnote mb-0">
+                      HR Module
+                    </p>
+                    <span class="caption2 text-muted">
+                      Hiring & Onboarding, Core HR, Payroll Management
                     </span>
                   </div>
                   <div nz-col [nzSpan]="6" class="text-right">
-                    <strong class="caption2 fs-14">
-                      INR 44000/-
-                    </strong>
+                    <span class="footnote text-muted">
+                      3 x 3000
+                    </span>
                   </div>
-                </div>
-              </nz-list-footer>
-            </ul>
-          </div>
-          <div class="mt-20 text-center">
-            <button nz-button nzType="default" class="mr-8" (click)="currentItem(1)">Back</button>
-            <button nz-button nzType="default" class="mr-8">Send Estimate over Email</button>
-            <button nz-button nzType="primary" (click)="goToConsole()">Activate Free 30 Day Trail</button>
-          </div>
+                  <div nz-col [nzSpan]="6" class="text-right">
+                    <span class="footnote">
+                      INR 9000/-
+                    </span>
+                  </div>
+                </li>
+                <li nz-list-item class="text-right">
+                  <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+                    <span class="footnote text-muted">
+                      Total
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="6" class="text-right">
+                    <span class="footnote">
+                      INR 12000/-
+                    </span>
+                  </div>
+                </li>
+                <li nz-list-item>
+                  <span class="text-uppercase caption2">Recurring Subscriptions</span>
+                </li>
+                <li nz-list-item>
+                  <div nz-col [nzSpan]="12">
+                    <p class="footnote mb-0">
+                      User Subscription
+                    </p>
+                    <span class="caption2 text-muted">
+                      First 20 users.
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="12" class="text-right">
+                    <span class="footnote">
+                      INR 0/-
+                    </span>
+                  </div>
+                </li>
+                <li nz-list-item>
+                  <div nz-col [nzSpan]="12">
+                    <p class="footnote mb-0">
+                      Storage Space
+                    </p>
+                    <span class="caption2 text-muted">
+                      Upto 5GB
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="12" class="text-right">
+                    <span class="footnote">
+                      INR 0/-
+                    </span>
+                  </div>
+                </li>
+                <li nz-list-item>
+                  <div nz-col [nzSpan]="12">
+                    <p class="footnote mb-0">
+                      Incremental Users
+                    </p>
+                    <span class="caption2 text-muted">
+                      As per your team size estimated amount
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="6" class="text-right">
+                    <span class="footnote text-muted">
+                      80 x 400
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="6" class="text-right">
+                    <span class="footnote">
+                      INR 32000/-
+                    </span>
+                  </div>
+                </li>
+                <li nz-list-item class="text-right">
+                  <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+                    <span class="footnote text-muted">
+                      Total
+                    </span>
+                  </div>
+                  <div nz-col [nzSpan]="6" class="text-right">
+                    <span class="footnote">
+                      INR 32000/-
+                    </span>
+                  </div>
+                </li>
+                <nz-list-footer class="text-right">
+                  <div nz-row class="pt-30">
+                    <div nz-col [nzSpan]="6" nzOffset="12" class="text-right">
+                      <span class="footnote text-muted">
+                        Grand Total
+                      </span>
+                    </div>
+                    <div nz-col [nzSpan]="6" class="text-right">
+                      <strong class="caption2 fs-14">
+                        INR 44000/-
+                      </strong>
+                    </div>
+                  </div>
+                </nz-list-footer>
+              </ul>
+            </div>
+            <div class="mt-20 text-center">
+              <button nz-button nzType="default" class="mr-8" (click)="currentItem(1)">Back</button>
+              <button nz-button nzType="default" class="mr-8">Send Estimate over Email</button>
+              <button nz-button nzType="primary" (click)="goToConsole()">Activate Free 30 Day Trail</button>
+            </div>
+          </section>
         </section>
       </div>
     </div>

@@ -1,19 +1,35 @@
-<section class="pt-30 bg-white px-80">
+<nav class="px-30 py-20 bg-white bb">
+  <div nz-row [nzGutter]="16" nzJustify="space-between">
+    <div nz-col [nzSpan]="6">
+      <h2 class="headline mb-5">Marketplace</h2>
+      <p class="footnote mb-0 fs-10">
+        Version: 1.0.0
+      </p>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <nz-input-group [nzSuffix]="suffixIconSearch" nzSize="large">
+        <input type="text" [ngModel]="searchInput" (ngModelChange)="search($event)" nz-input
+          placeholder="Search for apps Ex: Hiring, Payroll" />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+      </ng-template>
+    </div>
+    <div nz-col [nzSpan]="6">
+
+    </div>
+  </div>
+</nav>
+<section class="bg-white px-80">
   <div nz-row [nzGutter]="16" class="mb-30">
     <div nz-col [nzSpan]="24" class="p-30 text-center">
-      <p class="headline">
-        Welcome to OfficeSuit 360 Console
-      </p>
-      <div nz-row [nzGutter]="16" nzJustify="center">
-        <div nz-col [nzSpan]="12">
-          <nz-input-group [nzSuffix]="suffixIconSearch" nzSize="large">
-            <input type="text" [ngModel]="searchInput" (ngModelChange)="search($event)" nz-input
-              placeholder="Search by module name" />
-          </nz-input-group>
-          <ng-template #suffixIconSearch>
-            <i nz-icon nzType="search"></i>
-          </ng-template>
-        </div>
+      <div class="p-50 border bg-accent text-white">
+        <p class="title1 mb-10">
+          Unlock the full potential of your business with the help of apps.
+        </p>
+        <p class="subhead">
+          These powerful applications empower you to optimize workflows, streamline operations, and maximize efficiency. Seamlessly integrating into your business environment, apps provide innovative solutions tailored to your specific needs.
+        </p>
       </div>
     </div>
   </div>

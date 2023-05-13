@@ -70,6 +70,8 @@ import { NzMentionModule } from 'ng-zorro-antd/mention';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShortcutComponent } from './components/shortcut/shortcut.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -89,7 +91,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     DocumentComponent,
     NewChatComponent,
     NewMessageComponent,
-    ShortcutComponent
+    ShortcutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     NzSelectModule,
@@ -218,7 +222,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NewChatComponent,
     NewMessageComponent,
     NzMentionModule,
-    ShortcutComponent
+    ShortcutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   providers: [{
     provide: NZ_ICONS,

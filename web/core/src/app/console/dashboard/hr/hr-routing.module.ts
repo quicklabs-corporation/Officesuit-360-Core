@@ -12,31 +12,37 @@ import { HiringComponent } from './hiring/hiring.component';
 const routes: Routes = [{
   path: '',
   component: HrComponent,
-  children: [{
-    path: 'hiring',
-    component: HiringComponent
-  }, {
-    path: 'organization',
-    component: OrgnizationStructureComponent
-  }, {
-    path: 'analytics',
-    component: AnalyticsComponent
-  }, {
-    path: 'attandance',
-    component: AttandanceManagementComponent
-  }, {
-    path: 'legaldocuments',
-    component: LegalDocumentsComponent
-  }, {
-    path: 'onboarding',
-    component: OnboardingComponent
-  }, {
-    path: 'attandance',
-    component: OnboardingComponent
-  }, {
-    path: 'configurations',
-    component: ConfigurationsManagenentComponent
-  }]
+  children: [
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'analytics'
+    },
+    {
+      path: 'hiring',
+      component: HiringComponent
+    }, {
+      path: 'organization',
+      component: OrgnizationStructureComponent
+    }, {
+      path: 'analytics',
+      component: AnalyticsComponent
+    }, {
+      path: 'attandance',
+      component: AttandanceManagementComponent
+    }, {
+      path: 'legaldocuments',
+      component: LegalDocumentsComponent
+    }, {
+      path: 'onboarding',
+      component: OnboardingComponent
+    }, {
+      path: 'attandance',
+      component: OnboardingComponent
+    }, {
+      path: 'configurations',
+      component: ConfigurationsManagenentComponent
+    }]
 }];
 
 @NgModule({
