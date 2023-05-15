@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --build-optimizer",
-    "start": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng serve",
+    "start": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng serve --proxy-config proxy.conf.json",
     "dev-build": "npm run env -s && node --max_old_space_size=16000 ./node_modules/@angular/cli/bin/ng build --build-optimizer --configuration=dev",
     "test": "ng test",
     "lint": "ng lint",

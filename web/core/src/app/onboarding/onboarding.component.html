@@ -9,7 +9,7 @@
     <div nz-col class="text-right" [nzSpan]="12">
       <a nz-button nzType="link" class="mr-8"><i nz-icon nzType="question-circle" nzTheme="outline"></i> FAQ's</a>
       <a nz-button nzType="link" class="mr-8"><i nz-icon nzType="info-circle" nzTheme="outline"></i> User Guide</a>
-      <button nz-button nzType="primary">Signout</button>
+      <button nz-button nzType="primary" (click)="signOut()">Signout</button>
     </div>
   </div>
 </nav>
@@ -37,14 +37,16 @@
             </p>
           </div>
           <div nz-row nzJustify="center" class="bg-white border py-50">
-            <div nz-col [nzSpan]="16">
+            <div nz-col [nzSpan]="16" *ngIf="baseData">
               <form autocomplete="off" nz-form [formGroup]="organizationDetailsForm">
                 <nz-form-item class="mb-30">
                   <nz-form-label [nzSpan]="24">Select Industry</nz-form-label>
                   <nz-form-control nzErrorTip="Please select industry">
                     <nz-select formControlName="industry" placeholder="Select industry">
-                      <nz-option nzLabel="IT Solutions" nzValue="+86"></nz-option>
-                      <nz-option nzLabel="IT Services" nzValue="+87"></nz-option>
+                      <nz-option nzLabel="Select Industry" nzValue="''">
+                      </nz-option>
+                      <nz-option *ngFor="let each of baseData.industries" [nzLabel]="each.name" [nzValue]="each.id">
+                      </nz-option>
                     </nz-select>
                   </nz-form-control>
                 </nz-form-item>
@@ -52,8 +54,8 @@
                   <nz-form-label [nzSpan]="24">Select Country</nz-form-label>
                   <nz-form-control nzErrorTip="Please select country">
                     <nz-select formControlName="country" placeholder="Select country">
-                      <nz-option nzLabel="United states" nzValue="+86"></nz-option>
-                      <nz-option nzLabel="India" nzValue="+87"></nz-option>
+                      <nz-option *ngFor="let each of baseData.countries" [nzLabel]="each.name" [nzValue]="each.id">
+                      </nz-option>
                     </nz-select>
                   </nz-form-control>
                 </nz-form-item>
@@ -61,8 +63,8 @@
                   <nz-form-label [nzSpan]="24">Choose Currency</nz-form-label>
                   <nz-form-control nzErrorTip="Please select currency">
                     <nz-select formControlName="currency" placeholder="Select currency">
-                      <nz-option nzLabel="US Dollar" nzValue="Dollar"></nz-option>
-                      <nz-option nzLabel="Indian Rupees" nzValue="INR"></nz-option>
+                      <nz-option *ngFor="let each of baseData.countries" [nzLabel]="each.currency" [nzValue]="each.symbol">
+                      </nz-option>
                     </nz-select>
                   </nz-form-control>
                 </nz-form-item>
