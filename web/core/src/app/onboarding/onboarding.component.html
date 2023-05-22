@@ -36,78 +36,84 @@
               Please provide the following information to configure your organization.
             </p>
           </div>
-          <div nz-row nzJustify="center" class="bg-white border py-50">
-            <div nz-col [nzSpan]="16" *ngIf="baseData">
-              <form autocomplete="off" nz-form [formGroup]="organizationDetailsForm">
-                <nz-form-item class="mb-30">
-                  <nz-form-label [nzSpan]="24">Select Industry</nz-form-label>
-                  <nz-form-control nzErrorTip="Please select industry">
-                    <nz-select formControlName="industry" placeholder="Select industry">
-                      <nz-option nzLabel="Select Industry" nzValue="''">
-                      </nz-option>
-                      <nz-option *ngFor="let each of baseData.industries" [nzLabel]="each.name" [nzValue]="each.id">
-                      </nz-option>
-                    </nz-select>
-                  </nz-form-control>
-                </nz-form-item>
-                <nz-form-item class="mb-30">
-                  <nz-form-label [nzSpan]="24">Select Country</nz-form-label>
-                  <nz-form-control nzErrorTip="Please select country">
-                    <nz-select formControlName="country" placeholder="Select country">
-                      <nz-option *ngFor="let each of baseData.countries" [nzLabel]="each.name" [nzValue]="each.id">
-                      </nz-option>
-                    </nz-select>
-                  </nz-form-control>
-                </nz-form-item>
-                <nz-form-item class="mb-30">
-                  <nz-form-label [nzSpan]="24">Choose Currency</nz-form-label>
-                  <nz-form-control nzErrorTip="Please select currency">
-                    <nz-select formControlName="currency" placeholder="Select currency">
-                      <nz-option *ngFor="let each of baseData.countries" [nzLabel]="each.currency" [nzValue]="each.symbol">
-                      </nz-option>
-                    </nz-select>
-                  </nz-form-control>
-                </nz-form-item>
-                <div nz-row [nzGutter]="16">
-                  <div nz-col [nzSpan]="12">
-                    <nz-form-item class="mb-30">
-                      <nz-form-label [nzSpan]="24">Enter State</nz-form-label>
-                      <nz-form-control nzErrorTip="Please select state">
-                        <input type="text" nz-input formControlName="state" placeholder="Enter State" />
-                      </nz-form-control>
-                    </nz-form-item>
+          <ng-template *qlGostLoader="baseData; else formGhostTemplate">
+            <div nz-row nzJustify="center" class="bg-white border py-50">
+              <div nz-col [nzSpan]="16">
+                <form autocomplete="off" nz-form [formGroup]="organizationDetailsForm">
+                  <nz-form-item class="mb-30">
+                    <nz-form-label [nzSpan]="24">Select Industry</nz-form-label>
+                    <nz-form-control nzErrorTip="Please select industry">
+                      <nz-select formControlName="industry" placeholder="Select industry">
+                        <nz-option nzLabel="Select Industry" nzValue="''">
+                        </nz-option>
+                        <nz-option *ngFor="let each of baseData.industries" [nzLabel]="each.name" [nzValue]="each.id">
+                        </nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </nz-form-item>
+                  <nz-form-item class="mb-30">
+                    <nz-form-label [nzSpan]="24">Select Country</nz-form-label>
+                    <nz-form-control nzErrorTip="Please select country">
+                      <nz-select formControlName="country" placeholder="Select country">
+                        <nz-option *ngFor="let each of baseData.countries" [nzLabel]="each.name" [nzValue]="each.id">
+                        </nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </nz-form-item>
+                  <nz-form-item class="mb-30">
+                    <nz-form-label [nzSpan]="24">Choose Currency</nz-form-label>
+                    <nz-form-control nzErrorTip="Please select currency">
+                      <nz-select formControlName="currency" placeholder="Select currency">
+                        <nz-option *ngFor="let each of baseData.countries" [nzLabel]="each.currency"
+                          [nzValue]="each.id">
+                        </nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </nz-form-item>
+                  <div nz-row [nzGutter]="16">
+                    <div nz-col [nzSpan]="12">
+                      <nz-form-item class="mb-30">
+                        <nz-form-label [nzSpan]="24">Enter State</nz-form-label>
+                        <nz-form-control nzErrorTip="Please select state">
+                          <input type="text" nz-input formControlName="state" placeholder="Enter State" />
+                        </nz-form-control>
+                      </nz-form-item>
+                    </div>
+                    <div nz-col [nzSpan]="12">
+                      <nz-form-item class="mb-30">
+                        <nz-form-label [nzSpan]="24">Zipcode</nz-form-label>
+                        <nz-form-control nzErrorTip="Please enter zipcode">
+                          <input type="number" nz-input formControlName="zipcode" placeholder="Enter zipcode" />
+                        </nz-form-control>
+                      </nz-form-item>
+                    </div>
                   </div>
-                  <div nz-col [nzSpan]="12">
-                    <nz-form-item class="mb-30">
-                      <nz-form-label [nzSpan]="24">Zipcode</nz-form-label>
-                      <nz-form-control nzErrorTip="Please enter zipcode">
-                        <input type="number" nz-input formControlName="zipcode" placeholder="Enter zipcode" />
-                      </nz-form-control>
-                    </nz-form-item>
-                  </div>
-                </div>
-                <nz-form-item class="mb-30">
-                  <nz-form-label [nzSpan]="24">Organization Address</nz-form-label>
-                  <nz-form-control nzErrorTip="Please enter a valid Address">
-                    <nz-textarea-count [nzMaxCharacterCount]="150">
-                      <textarea rows="4" formControlName="orgAddress" placeholder="Enter organization address"
-                        nz-input></textarea>
-                    </nz-textarea-count>
-                  </nz-form-control>
-                </nz-form-item>
-                <nz-form-item class="mb-30">
-                  <nz-form-label [nzSpan]="24">Specify Team Size</nz-form-label>
-                  <nz-form-control nzErrorTip="Please enter valid team size">
-                    <input type="number" nz-input formControlName="teamSize" placeholder="Enter team size" />
-                  </nz-form-control>
-                </nz-form-item>
+                  <nz-form-item class="mb-30">
+                    <nz-form-label [nzSpan]="24">Organization Address</nz-form-label>
+                    <nz-form-control nzErrorTip="Please enter a valid Address">
+                      <nz-textarea-count [nzMaxCharacterCount]="150">
+                        <textarea rows="4" formControlName="orgAddress" placeholder="Enter organization address"
+                          nz-input></textarea>
+                      </nz-textarea-count>
+                    </nz-form-control>
+                  </nz-form-item>
+                  <nz-form-item class="mb-30">
+                    <nz-form-label [nzSpan]="24">Specify Team Size</nz-form-label>
+                    <nz-form-control nzErrorTip="Please enter valid team size">
+                      <input type="number" nz-input formControlName="teamSize" placeholder="Enter team size" />
+                    </nz-form-control>
+                  </nz-form-item>
 
-              </form>
-              <div class="mt-20 text-center">
-                <button nz-button nzType="primary" (click)="currentItem(1)">Continue</button>
+                </form>
+                <div class="mt-20 text-center">
+                  <button nz-button nzType="primary" (click)="currentItem(1)">Continue</button>
+                </div>
               </div>
             </div>
-          </div>
+          </ng-template>
+          <ng-template #formGhostTemplate>
+            <nz-skeleton [nzActive]="true"></nz-skeleton>
+          </ng-template>
         </section>
         <section *ngIf="currentStep === 1" class="p-50 py-0">
           <div class="text-center mb-50">

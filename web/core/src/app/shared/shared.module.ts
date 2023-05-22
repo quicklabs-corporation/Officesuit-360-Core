@@ -72,6 +72,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShortcutComponent } from './components/shortcut/shortcut.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { GhostLoaderDirective } from './directives/ghost-loader.directive';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -93,7 +94,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NewMessageComponent,
     ShortcutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GhostLoaderDirective
   ],
   imports: [
     NzSelectModule,
@@ -224,7 +226,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzMentionModule,
     ShortcutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GhostLoaderDirective
   ],
   providers: [{
     provide: NZ_ICONS,

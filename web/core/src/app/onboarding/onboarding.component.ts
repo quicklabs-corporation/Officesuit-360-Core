@@ -51,7 +51,7 @@ export class OnboardingComponent implements OnInit {
       teamSize: ['', [Validators.required]],
       state: ['', [Validators.required]],
       zipcode: ['', [Validators.required]],
-      currency: ['$', [Validators.required]],
+      currency: [1, [Validators.required]],
       industry: [1, [Validators.required]],
     });
     this.getBaseData();
@@ -68,8 +68,8 @@ export class OnboardingComponent implements OnInit {
 
   listenToFormEventChanges() {
     this.organizationDetailsForm.controls['country'].valueChanges.subscribe((value) => {
-      const currency = this.baseData.
-      this.organizationDetailsForm.controls['currency'].setValue()
+      // const currency = this.baseData.
+      this.organizationDetailsForm.controls['currency'].setValue(value)
     })
   }
 

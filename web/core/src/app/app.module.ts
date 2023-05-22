@@ -18,6 +18,7 @@ import { HotkeyModule } from 'angular2-hotkeys';
 
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { GhostloadingInterceptor } from './core/interceptors/ghostloading.interceptor';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -49,6 +50,10 @@ registerLocaleData(en);
   }, { provide: NZ_I18N, useValue: en_US }, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
+    multi: true
+  }, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: GhostloadingInterceptor,
     multi: true
   }],
   bootstrap: [AppComponent],
