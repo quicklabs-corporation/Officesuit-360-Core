@@ -96,10 +96,11 @@ export class AppsComponent implements OnInit {
   }
 
   navigateTo(path: string): void {
-    const url = this.router.serializeUrl(
-      this.router.createUrlTree([`/dashboard/${path}`])
-    );
-    window.open(url, '_blank');
+    this.router.navigate([`/console/dashboard/${path}`])
+    // const url = this.router.serializeUrl(
+    //   this.router.createUrlTree([`/dashboard/${path}`])
+    // );
+    // window.open(url, '_blank');
   }
 
   search(event: any): void {

@@ -1,0 +1,859 @@
+{
+	"info": {
+		"_postman_id": "38bed0a5-dcf6-4bd7-9b6b-e6c26dc1eab2",
+		"name": "Organization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25561541"
+	},
+	"item": [
+		{
+			"name": "static",
+			"item": [
+				{
+					"name": "Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/common/countries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"common",
+								"countries"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Countries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/common/countries",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"common",
+										"countries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 1,\n                \"name\": \"United States\",\n                \"active\": true,\n                \"currency\": \"US Dollar\",\n                \"valueToUSD\": 1,\n                \"symbol\": \"$\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"China\",\n                \"active\": true,\n                \"currency\": \"Chinese Yuan\",\n                \"valueToUSD\": 0.15,\n                \"symbol\": \"¥\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Japan\",\n                \"active\": true,\n                \"currency\": \"Japanese Yen\",\n                \"valueToUSD\": 0.0091,\n                \"symbol\": \"¥\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Germany\",\n                \"active\": true,\n                \"currency\": \"Euro\",\n                \"valueToUSD\": 1.18,\n                \"symbol\": \"€\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"United Kingdom\",\n                \"active\": true,\n                \"currency\": \"British Pound\",\n                \"valueToUSD\": 1.4,\n                \"symbol\": \"£\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"India\",\n                \"active\": true,\n                \"currency\": \"Indian Rupee\",\n                \"valueToUSD\": 0.014,\n                \"symbol\": \"₹\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"France\",\n                \"active\": true,\n                \"currency\": \"Euro\",\n                \"valueToUSD\": 1.18,\n                \"symbol\": \"€\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Italy\",\n                \"active\": true,\n                \"currency\": \"Euro\",\n                \"valueToUSD\": 1.18,\n                \"symbol\": \"€\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Brazil\",\n                \"active\": true,\n                \"currency\": \"Brazilian Real\",\n                \"valueToUSD\": 0.19,\n                \"symbol\": \"R$\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Canada\",\n                \"active\": true,\n                \"currency\": \"Canadian Dollar\",\n                \"valueToUSD\": 0.8,\n                \"symbol\": \"CA$\"\n            },\n            {\n                \"id\": 11,\n                \"name\": \"South Korea\",\n                \"active\": true,\n                \"currency\": \"South Korean Won\",\n                \"valueToUSD\": 0.00089,\n                \"symbol\": \"₩\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Australia\",\n                \"active\": true,\n                \"currency\": \"Australian Dollar\",\n                \"valueToUSD\": 0.77,\n                \"symbol\": \"AU$\"\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Russia\",\n                \"active\": true,\n                \"currency\": \"Russian Ruble\",\n                \"valueToUSD\": 0.013,\n                \"symbol\": \"₽\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Spain\",\n                \"active\": true,\n                \"currency\": \"Euro\",\n                \"valueToUSD\": 1.18,\n                \"symbol\": \"€\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Mexico\",\n                \"active\": true,\n                \"currency\": \"Mexican Peso\",\n                \"valueToUSD\": 0.05,\n                \"symbol\": \"$\"\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Indonesia\",\n                \"active\": true,\n                \"currency\": \"Indonesian Rupiah\",\n                \"valueToUSD\": 0.00007,\n                \"symbol\": \"Rp\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Industries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/common/industries",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"common",
+								"industries"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Industries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/common/industries",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"common",
+										"industries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 1,\n                \"name\": \"Agriculture\",\n                \"active\": true\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Apparel and Fashion\",\n                \"active\": true\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Automotive\",\n                \"active\": true\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Banking\",\n                \"active\": true\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Biotechnology\",\n                \"active\": true\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Chemicals\",\n                \"active\": true\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Construction\",\n                \"active\": true\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Consulting\",\n                \"active\": true\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Consumer Goods\",\n                \"active\": true\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Education\",\n                \"active\": true\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Energy\",\n                \"active\": true\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Engineering\",\n                \"active\": true\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Entertainment\",\n                \"active\": true\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Environmental\",\n                \"active\": true\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Financial Services\",\n                \"active\": true\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Food and Beverage\",\n                \"active\": true\n            },\n            {\n                \"id\": 17,\n                \"name\": \"Government\",\n                \"active\": true\n            },\n            {\n                \"id\": 18,\n                \"name\": \"Healthcare\",\n                \"active\": true\n            },\n            {\n                \"id\": 19,\n                \"name\": \"Hospitality\",\n                \"active\": true\n            },\n            {\n                \"id\": 20,\n                \"name\": \"Information Technology\",\n                \"active\": true\n            },\n            {\n                \"id\": 21,\n                \"name\": \"Insurance\",\n                \"active\": true\n            },\n            {\n                \"id\": 22,\n                \"name\": \"Legal Services\",\n                \"active\": true\n            },\n            {\n                \"id\": 23,\n                \"name\": \"Manufacturing\",\n                \"active\": true\n            },\n            {\n                \"id\": 24,\n                \"name\": \"Marketing and Advertising\",\n                \"active\": true\n            },\n            {\n                \"id\": 25,\n                \"name\": \"Media and Communications\",\n                \"active\": true\n            },\n            {\n                \"id\": 26,\n                \"name\": \"Non-profit Organizations\",\n                \"active\": true\n            },\n            {\n                \"id\": 27,\n                \"name\": \"Pharmaceuticals\",\n                \"active\": true\n            },\n            {\n                \"id\": 28,\n                \"name\": \"Professional Services\",\n                \"active\": true\n            },\n            {\n                \"id\": 29,\n                \"name\": \"Real Estate\",\n                \"active\": true\n            },\n            {\n                \"id\": 30,\n                \"name\": \"Retail\",\n                \"active\": true\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Telecommunications\",\n                \"active\": true\n            },\n            {\n                \"id\": 32,\n                \"name\": \"Transportation\",\n                \"active\": true\n            },\n            {\n                \"id\": 33,\n                \"name\": \"Travel and Tourism\",\n                \"active\": true\n            },\n            {\n                \"id\": 34,\n                \"name\": \"Utilities\",\n                \"active\": true\n            },\n            {\n                \"id\": 35,\n                \"name\": \"Wholesale\",\n                \"active\": true\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Modules",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "tenentId",
+								"value": "{{tenantId}}",
+								"type": "text"
+							},
+							{
+								"key": "organizationId",
+								"value": "{{organizationId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/onboarding/modules",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"onboarding",
+								"modules"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Modules",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "tenentId",
+										"value": "{{tenantId}}",
+										"type": "text"
+									},
+									{
+										"key": "organizationId",
+										"value": "{{organizationId}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/common/modules",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"common",
+										"modules"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": \"moduleId\",\n                \"name\": \"Module Name\",\n                \"price\": 1200,\n                \"currency\": \"Dollor\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "states",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/common/states?countryCode=US",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"common",
+								"states"
+							],
+							"query": [
+								{
+									"key": "countryCode",
+									"value": "US"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "states",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/common/states?countryCode=US",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"common",
+										"states"
+									],
+									"query": [
+										{
+											"key": "countryCode",
+											"value": "US"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 1,\n                \"name\": \"Alabama\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Alaska\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Arizona\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Arkansas\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 5,\n                \"name\": \"California\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Colorado\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Connecticut\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Delaware\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Florida\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Georgia\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Hawaii\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Idaho\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Illinois\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Indiana\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Iowa\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Kansas\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 17,\n                \"name\": \"Kentucky\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 18,\n                \"name\": \"Louisiana\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 19,\n                \"name\": \"Maine\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 20,\n                \"name\": \"Maryland\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 21,\n                \"name\": \"Massachusetts\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 22,\n                \"name\": \"Michigan\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 23,\n                \"name\": \"Minnesota\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 24,\n                \"name\": \"Mississippi\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 25,\n                \"name\": \"Missouri\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 26,\n                \"name\": \"Montana\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 27,\n                \"name\": \"Nebraska\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 28,\n                \"name\": \"Nevada\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 29,\n                \"name\": \"New Hampshire\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 30,\n                \"name\": \"New Jersey\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 31,\n                \"name\": \"New Mexico\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 32,\n                \"name\": \"New York\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 33,\n                \"name\": \"North Carolina\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 34,\n                \"name\": \"North Dakota\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 35,\n                \"name\": \"Ohio\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 36,\n                \"name\": \"Oklahoma\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 37,\n                \"name\": \"Oregon\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 38,\n                \"name\": \"Pennsylvania\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 39,\n                \"name\": \"Rhode Island\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 40,\n                \"name\": \"South Carolina\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 41,\n                \"name\": \"South Dakota\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 42,\n                \"name\": \"Tennessee\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 43,\n                \"name\": \"Texas\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 44,\n                \"name\": \"Utah\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 45,\n                \"name\": \"Vermont\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 46,\n                \"name\": \"Virginia\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 47,\n                \"name\": \"Washington\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 48,\n                \"name\": \"West Virginia\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 49,\n                \"name\": \"Wisconsin\",\n                \"active\": true,\n                \"countryId\": 1\n            },\n            {\n                \"id\": 50,\n                \"name\": \"Wyoming\",\n                \"active\": true,\n                \"countryId\": 1\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "billing",
+			"item": [
+				{
+					"name": "send estimation quote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "{{tenantId}}",
+								"type": "text"
+							},
+							{
+								"key": "organizationId",
+								"value": "{{organizationId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"surya@quicklabscorp.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/send-estimation",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"send-estimation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "send estimation quote",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "tenantId",
+										"value": "{{tenantId}}",
+										"type": "text"
+									},
+									{
+										"key": "organizationId",
+										"value": "{{organizationId}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"organizationId\": \"surya@quicklabscorp.com\",\n    \"modulesSelected\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/billing/send-estimation",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"billing",
+										"send-estimation"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"message\": \"Estimation has been sent your configured admin emails.\"\n    }\n}\n"
+						}
+					]
+				},
+				{
+					"name": "Activate Trail Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenentId",
+								"value": "{{tenantId}}",
+								"type": "text"
+							},
+							{
+								"key": "organizationId",
+								"value": "{{organizationId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/billing/activate-trailaccount",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"billing",
+								"activate-trailaccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "Organization Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"organizationName\": \"\",\n    \"domainName\": \"\",\n    \"industry\": \"\",\n    \"noOfEmployees\": 0,\n    \"country\": \"\",\n    \"adminData\" :{\n        \"emailAddress\": \"\",\n        \"password\": \"password\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/org/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"org",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Organization Creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"organizationName\": \"\",\n    \"domainName\": \"\",\n    \"industry\": \"\",\n    \"noOfEmployees\": 0,\n    \"country\": \"\",\n    \"adminData\" :{\n        \"emailAddress\": \"\",\n        \"password\": \"password\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/org/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"org",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n    \"organizationName\": \"\",\n    \"domainName\": \"\",\n    \"industry\": \"\",\n    \"noOfEmployees\": 0,\n    \"country\": \"\",\n    \"adminData\" :{\n        \"emailAddress\": \"\",\n        \"password\": \"password\"\n    }\n}\n}"
+						}
+					]
+				},
+				{
+					"name": "Organization Module Select",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenentId",
+								"value": "{{tenantId}}",
+								"type": "text"
+							},
+							{
+								"key": "organizationId",
+								"value": "{{organizationId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"modules\": [\"id\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/org/modules-subscription",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"org",
+								"modules-subscription"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "onboarding",
+			"item": [
+				{
+					"name": "Onboarding",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"domainName\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/onboarding/organization-details",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"onboarding",
+								"organization-details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "password-reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"Ervc8=OqO0vZTuDs\",\n    \"newPassword\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/password-reset",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"password-reset"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "password-reset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"Ervc8=OqO0vZTuDs\",\n    \"newPassword\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/auth/password-reset",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"password-reset"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"message\": \"Password has been reset successfully\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "{{tenantId}}",
+								"type": "text"
+							},
+							{
+								"key": "organizationId",
+								"value": "{{organizationId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"surya@quicklabscorp.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/forgot-email-verification",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot-email-verification"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "forgot password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "tenantId",
+										"value": "{{tenantId}}",
+										"type": "text"
+									},
+									{
+										"key": "organizationId",
+										"value": "{{organizationId}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"surya@quicklabscorp.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/auth/forgot-email-verification",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"forgot-email-verification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    isError: false,\n    data: {\n        message: \"Email has been sent to your registered organization address\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "{{tenantId}}",
+								"type": "text"
+							},
+							{
+								"key": "organizationId",
+								"value": "{{organizationId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"surya\",\n    \"password\": \"surya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "tenantId",
+										"value": "{{tenantId}}",
+										"type": "text"
+									},
+									{
+										"key": "organizationId",
+										"value": "{{organizationId}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"surya\",\n    \"password\": \"surya\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isError\": false,\n    \"data\": {\n        \"id\": \"uYb9S7xP2K3oL5zA\",\n        \"username\": \"suryakavutarapu\",\n        \"fullName\": \"Surya Teja Kavutarapu\",\n        \"email\": \"suryakavutarapu@quicklabs.com\",\n        \"organization\": \"quicklabs Corporation\",\n        \"organizationId\": \"B5F8D9A1C2E3G4H6\",\n        \"employeesCount\": 20,\n        \"authToken\": \"2YotnFZFEjr1zCsicMWpAA\",\n        \"appConfigured\": true\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Organization Configuration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenentId",
+						"value": "{{tenantId}}",
+						"type": "text"
+					},
+					{
+						"key": "organizationId",
+						"value": "{{organizationId}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"theme\": \"dark\",\n    \"primaryColor\": \"\",\n    \"secondaryColor\": \"\",\n    \"applogoUrl\": \"\",\n    \"emailLogoUrl\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/dashboard/configure-dashboard",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"configure-dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

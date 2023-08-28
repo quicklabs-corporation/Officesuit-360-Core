@@ -8,15 +8,17 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
-import {HotkeyModule} from 'angular2-hotkeys';
+import { HotkeyModule } from 'angular2-hotkeys';
 
 import * as AllIcons from '@ant-design/icons-angular/icons';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { GhostloadingInterceptor } from './core/interceptors/ghostloading.interceptor';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -45,7 +47,15 @@ registerLocaleData(en);
   providers: [{
     provide: NZ_ICONS,
     useValue: icons
-  }, { provide: NZ_I18N, useValue: en_US }],
+  }, { provide: NZ_I18N, useValue: en_US }, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: GhostloadingInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })

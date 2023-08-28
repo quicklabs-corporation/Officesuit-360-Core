@@ -2,13 +2,13 @@
   <div class="conversations">
     <nav class="conversations-nav">
       <div>
-        <span class="subhead mb-0 mr-10">Connect</span>
-        <nz-select [ngModel]="type" (ngModelChange)="loadConversation($event)" style="width: 150px;">
+        <span class="headline mb-0 mr-10">Pro Connect</span>
+      </div>
+      <div>
+        <nz-select class="mr-10" [ngModel]="type" (ngModelChange)="loadConversation($event)" style="width: 150px;">
           <nz-option nzValue="mail" nzLabel="Mailbox"></nz-option>
           <nz-option nzValue="conversations" nzLabel="Conversations"></nz-option>
         </nz-select>
-      </div>
-      <div>
         <button nz-button nzType="primary" class="mr-8" (click)="createConversation()">
           New message
         </button>

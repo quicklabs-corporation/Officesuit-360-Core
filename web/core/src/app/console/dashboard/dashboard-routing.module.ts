@@ -14,7 +14,7 @@ const routes: Routes = [{
   }, {
     path: 'overview',
     loadChildren: () => import('./overview/overview.module').then(m => m.OverviewModule)
-  },{
+  }, {
     path: 'entities',
     loadChildren: () => import('./entities/entities.module').then(m => m.EntitiesModule)
   }, {
