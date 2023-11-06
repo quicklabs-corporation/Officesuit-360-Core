@@ -1,4 +1,4 @@
-<span [ngSwitch]="type" #ref>
+<ng-container [ngSwitch]="type" #ref>
     <h1 *ngSwitchCase="'largetitle'" class="large-title">
          <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
     </h1>
@@ -50,7 +50,7 @@
     <span *ngSwitchDefault class="base">
          <ng-container *ngTemplateOutlet="contentRef" ></ng-container>
     </span>
-</span>
+</ng-container>
 
 <ng-template #contentRef>
     <ng-content></ng-content>
